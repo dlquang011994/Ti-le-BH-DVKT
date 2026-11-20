@@ -1,0 +1,919 @@
+<!doctype html>
+<html lang="vi" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:," />
+    <title>Phác thảo dashboard BH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #edf7f1;
+        --surface: #ffffff;
+        --surface-2: #e2f2e8;
+        --ink: #122019;
+        --ink-2: #3f5548;
+        --ink-3: #6d8577;
+        --line: #c8dfd1;
+        --accent: #00a06b;
+        --accent-soft: #cdf3e0;
+        --warn: #e4572e;
+        --warn-soft: #fde3d8;
+        --mid: #d97706;
+        --mid-soft: #fdeecb;
+        --bar: #00a06b;
+        --bar-track: #d8ecdf;
+        --chart-grid: #d3e4d9;
+      }
+      html[data-theme="dark"] {
+        color-scheme: dark;
+        --bg: #101613;
+        --surface: #1b221e;
+        --surface-2: #242e28;
+        --ink: #eef4ef;
+        --ink-2: #b9c6bc;
+        --ink-3: #8fa296;
+        --line: #31453a;
+        --accent: #2fd598;
+        --accent-soft: #14382a;
+        --warn: #ff8a5c;
+        --warn-soft: #46241a;
+        --mid: #f5b74e;
+        --mid-soft: #40331a;
+        --bar: #2fd598;
+        --bar-track: #2a362f;
+        --chart-grid: #2c3a32;
+      }
+      * { box-sizing: border-box; }
+      html { -webkit-text-size-adjust: 100%; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", sans-serif;
+        font-size: 15px;
+        line-height: 1.5;
+      }
+      .num { font-family: "IBM Plex Mono", ui-monospace, monospace; font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
+      .wrap { max-width: 1080px; margin: 0 auto; padding: 20px 16px 48px; }
+
+      header.top { margin-bottom: 18px; }
+      header.top h1 { font-size: 26px; font-weight: 800; margin: 0 0 4px; letter-spacing: -0.01em; }
+      header.top p { margin: 0; color: var(--ink-2); font-size: 14px; }
+      header.top p b { color: var(--ink); font-weight: 600; }
+
+      /* Time filter */
+      .filters { display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-end; margin-top: 16px; }
+      .f-field { display: flex; flex-direction: column; gap: 6px; }
+      .f-field label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-3); }
+      .f-field select {
+        min-height: 42px; min-width: 190px; padding: 8px 12px;
+        border: 1px solid var(--line); border-radius: 8px;
+        background: var(--surface-2); color: var(--ink);
+        font: inherit; font-size: 14.5px; font-weight: 600; cursor: pointer;
+      }
+      .f-field select:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+      .period-note { flex: 1 1 100%; margin: 2px 0 0; font-size: 13px; color: var(--ink-3); }
+      @media (max-width: 640px) {
+        .f-field { flex: 1 1 140px; }
+        .f-field select { width: 100%; min-width: 0; }
+      }
+
+      /* KPI cards */
+      .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }
+      .kpi { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px; }
+      .kpi .k-label { font-size: 13px; font-weight: 700; color: var(--ink-2); }
+      .kpi .k-value { font-size: 30px; font-weight: 600; line-height: 1.15; margin: 4px 0 2px; white-space: nowrap; }
+      .kpi .k-note { font-size: 12.5px; color: var(--ink-3); }
+      .kpi.hero { background: var(--accent); border-color: var(--accent); color: #fff; }
+      .kpi.hero .k-label, .kpi.hero .k-note { color: rgba(255,255,255,0.85); }
+      html[data-theme="dark"] .kpi.hero { color: #0c1512; }
+      html[data-theme="dark"] .kpi.hero .k-label, html[data-theme="dark"] .kpi.hero .k-note { color: rgba(12,21,18,0.75); }
+      @media (max-width: 760px) { .kpis { grid-template-columns: 1fr 1fr; } .kpi.hero { grid-column: span 2; } .kpi .k-value { font-size: 24px; } }
+
+      section.block { margin-top: 34px; }
+      section.block > h2 { font-size: 19px; font-weight: 800; margin: 0 0 2px; letter-spacing: -0.01em; }
+      section.block > .sub { margin: 0 0 14px; color: var(--ink-2); font-size: 13.5px; }
+      .card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px; }
+
+      /* Group table */
+      table.groups { width: 100%; border-collapse: collapse; }
+      table.groups th, table.groups td { padding: 10px 12px; text-align: right; vertical-align: middle; }
+      table.groups th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-3); font-weight: 700; border-bottom: 2px solid var(--line); }
+      table.groups td { border-bottom: 1px solid var(--line); font-size: 15px; }
+      table.groups tr:last-child td { border-bottom: none; }
+      table.groups th:first-child, table.groups td:first-child { text-align: left; padding-left: 4px; }
+      table.groups td.gname { font-weight: 700; }
+      table.groups tr.total td { border-top: 2px solid var(--line); border-bottom: none; font-weight: 700; background: var(--surface-2); }
+      .rate-cell { min-width: 170px; }
+      .rate-line { display: flex; align-items: center; gap: 10px; justify-content: flex-end; }
+      .rate-bar { flex: 0 0 84px; height: 8px; border-radius: 4px; background: var(--bar-track); overflow: hidden; }
+      .rate-bar i { display: block; height: 100%; background: var(--bar); border-radius: 4px; }
+      .rate-val { font-weight: 800; font-size: 19px; min-width: 72px; color: var(--ink); letter-spacing: -0.01em; }
+      table.groups td.dim-num { color: var(--ink-2); font-size: 13.5px; }
+      /* Parallel display rule: rate prominent, Bán/BH small */
+      .rate-big { display: block; font-size: 20px; font-weight: 800; line-height: 1.1; color: var(--ink); letter-spacing: -0.01em; }
+      .vals-small { display: block; margin-top: 3px; font-size: 12px; line-height: 1.35; color: var(--ink-3); font-weight: 500; }
+      .cmp-rate { font-size: 17px; font-weight: 800; color: var(--ink); white-space: nowrap; }
+      .cmp-dim { font-size: 13px; color: var(--ink-2); font-weight: 500; white-space: nowrap; }
+      /* Màu tỉ lệ BH theo ngưỡng: <2,00% xanh lá, =2,00% vàng, >=2,01% đỏ */
+      .rate-g { color: var(--accent) !important; }
+      .rate-y { color: var(--mid) !important; }
+      .rate-r { color: var(--warn) !important; }
+      .bar-g { background: var(--accent) !important; }
+      .bar-y { background: var(--mid) !important; }
+      .bar-r { background: var(--warn) !important; }
+      @media (max-width: 640px) {
+        table.groups thead { display: none; }
+        table.groups, table.groups tbody, table.groups tr, table.groups td { display: block; width: 100%; }
+        table.groups tr { border-bottom: 1px solid var(--line); padding: 10px 0; }
+        table.groups tr:last-child { border-bottom: none; }
+        table.groups td { border: none; padding: 2px 4px; text-align: left; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+        table.groups td::before { content: attr(data-th); font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-3); font-weight: 700; }
+        table.groups td.gname { font-size: 16px; }
+        table.groups td.gname::before { content: none; }
+        .rate-line { justify-content: flex-end; }
+        table.groups tr.total td { background: transparent; border-top: none; }
+        table.groups tr.total { background: var(--surface-2); border-radius: 8px; padding: 10px 8px; }
+      }
+
+      /* Chart */
+      .chart-scroll { width: 100%; }
+      svg.chart { width: 100%; height: auto; display: block; }
+      .ov-title { font-size: 13.5px; font-weight: 700; color: var(--ink-2); margin: 0 0 4px; }
+
+      /* Heatmap: mỗi ô = 1 nhóm × 1 tháng, màu càng đậm tỉ lệ càng cao */
+      .hm-head, .hm-row { display: flex; align-items: stretch; gap: 4px; }
+      .hm-head { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--line); }
+      .hm-gname { flex: 0 0 108px; display: flex; align-items: center; font-weight: 700; font-size: 14.5px; }
+      .hm-cells { flex: 1 1 auto; display: grid; gap: 4px; min-width: 0; }
+      .hm-head .hm-cells > div { text-align: center; font-size: 11.5px; font-weight: 600; color: var(--ink-3); padding: 2px 0; }
+      .hm-head .hm-cells > div.sel { color: var(--accent); font-weight: 800; }
+      .hm-avg-head { flex: 0 0 84px; text-align: right; font-size: 11.5px; font-weight: 600; color: var(--ink-3); display: flex; align-items: center; justify-content: flex-end; }
+      .hm-row { padding: 2px 0; }
+      .hm-cell { border-radius: 6px; padding: 8px 2px; text-align: center; line-height: 1.25; }
+      .hm-cell.sel { box-shadow: inset 0 0 0 2px var(--accent); }
+      .hm-v { display: block; font-size: 12.5px; font-weight: 700; }
+      .hm-m { display: none; }
+      .hm-avg { flex: 0 0 84px; display: flex; flex-direction: column; justify-content: center; text-align: right; }
+      .hm-avg .rate-big { font-size: 17px; }
+      .hm-avg-label { display: none; }
+      .heat-legend { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 16px; font-size: 12.5px; color: var(--ink-2); }
+      .heat-scale { flex: 0 0 170px; height: 10px; border-radius: 5px; border: 1px solid var(--line); background: linear-gradient(90deg, rgba(228,87,46,0.06), rgba(228,87,46,0.92)); }
+      @media (max-width: 640px) {
+        .hm-head { display: none; }
+        .hm-row { flex-direction: column; gap: 6px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+        .hm-row:last-child { border-bottom: none; }
+        .hm-gname { flex: none; font-size: 15.5px; }
+        .hm-cells { grid-template-columns: repeat(4, 1fr) !important; }
+        .hm-cell { padding: 6px 2px; }
+        .hm-m { display: block; font-size: 10px; font-weight: 600; opacity: 0.75; margin-bottom: 1px; }
+        .hm-avg { flex: none; flex-direction: row; align-items: baseline; gap: 8px; text-align: left; order: 3; }
+        .hm-avg-label { display: inline; font-size: 12px; color: var(--ink-3); font-weight: 600; }
+        .heat-scale { flex-basis: 120px; }
+      }
+      .legend { display: flex; gap: 10px 22px; flex-wrap: wrap; font-size: 13px; color: var(--ink-2); margin-top: 14px; line-height: 1.6; }
+      .legend span { display: inline-flex; align-items: center; gap: 7px; }
+      .swatch { width: 22px; height: 10px; border-radius: 3px; background: var(--bar); display: inline-block; }
+      .swatch.line { height: 3px; border-radius: 2px; background: var(--warn); }
+
+      /* Brand bars */
+      .brands { display: grid; gap: 14px; }
+      .brand-row { display: grid; grid-template-columns: 110px 1fr 148px; grid-template-areas: "name track vals"; gap: 12px; align-items: center; }
+      .brand-row .b-name { grid-area: name; font-weight: 700; font-size: 14.5px; }
+      .brand-row .b-track { grid-area: track; height: 14px; border-radius: 4px; background: var(--bar-track); overflow: hidden; }
+      .brand-row .b-track i { display: block; height: 100%; background: var(--bar); }
+      .brand-row .b-vals { grid-area: vals; text-align: right; }
+      @media (max-width: 640px) {
+        /* Điện thoại: tên hãng + tỉ lệ trên 1 dòng, thanh ngang full chiều rộng ở dòng dưới */
+        .brand-row { grid-template-columns: 1fr auto; grid-template-areas: "name vals" "track track"; gap: 6px 10px; }
+        .brand-row .b-track { height: 12px; }
+        .rate-big { font-size: 18px; }
+        .vals-small { font-size: 11.5px; }
+        header.top h1 { font-size: 21px; }
+        .tabs { flex: 1 1 auto; }
+        .tab { flex: 1 1 0; text-align: center; padding-left: 8px; padding-right: 8px; }
+        .rate-bar { flex-basis: 56px; }
+      }
+      /* Sheet tabs + theme toggle */
+      .sheetbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-top: 16px; }
+      .tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+      .tab, .theme-btn { min-height: 42px; padding: 8px 16px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--ink-2); font: inherit; font-size: 14.5px; font-weight: 700; cursor: pointer; }
+      .tab.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+      html[data-theme="dark"] .tab.active { color: #0c1512; }
+      .theme-btn { background: var(--surface-2); color: var(--ink); }
+      .tab:focus-visible, .theme-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+      /* Brand group filter (sheet 1) */
+      .brand-tools { margin-bottom: 14px; }
+      .tools-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-end; }
+      .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; }
+      @media (max-width: 900px) { .duo { grid-template-columns: 1fr; } }
+      .card h3 { font-size: 15px; font-weight: 800; margin: 0 0 10px; }
+
+      /* Compare tables (sheet 2) */
+      /* Bảng so sánh giữ nguyên dạng bảng ở mọi màn hình: bọc trong vùng cuộn ngang,
+         chỉ cuộn khi bảng rộng hơn khung nhìn; đủ chỗ (vd xoay ngang) thì không cuộn. */
+      .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; scrollbar-width: thin; }
+      table.cmp { width: max-content; min-width: 100%; border-collapse: separate; border-spacing: 0; }
+      table.cmp th, table.cmp td { padding: 9px 10px; text-align: right; vertical-align: middle; white-space: nowrap; }
+      table.cmp th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-3); font-weight: 700; border-bottom: 2px solid var(--line); }
+      table.cmp td { border-bottom: 1px solid var(--line); font-size: 14.5px; }
+      table.cmp tr:last-child td { border-bottom: none; }
+      table.cmp th:first-child, table.cmp td:first-child { text-align: left; padding-left: 4px; }
+      table.cmp th.yr { text-align: center; background: var(--surface-2); color: var(--ink); font-size: 13px; border-bottom: 1px solid var(--line); }
+      table.cmp td.kname { font-weight: 700; }
+      table.cmp tr.total td { border-top: 2px solid var(--line); border-bottom: none; font-weight: 700; background: var(--surface-2); }
+      .d-up { color: var(--warn); font-weight: 600; }
+      .d-down { color: var(--accent); font-weight: 600; }
+      .swatch.line2 { height: 3px; border-radius: 2px; }
+      /* Cột đầu (nhãn dòng) cố định khi cuộn ngang */
+      table.cmp thead tr:first-child th:first-child { position: sticky; left: 0; z-index: 3; background: var(--surface); border-right: 1px solid var(--line); }
+      table.cmp td:first-child { position: sticky; left: 0; z-index: 1; background: var(--surface); border-right: 1px solid var(--line); min-width: 96px; }
+      table.cmp tr.total td:first-child { background: var(--surface-2); }
+      @media (max-width: 640px) {
+        table.cmp th, table.cmp td { padding: 8px; font-size: 13.5px; }
+        table.cmp td:first-child { min-width: 84px; }
+      }
+
+      footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--ink-3); font-size: 13px; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="top">
+        <h1>Theo dõi tỉ lệ bảo hành qua từng năm - TTDVKT</h1>
+        <p>Dữ liệu được cập nhật và làm mới hằng tháng</p>
+      </header>
+
+      <div class="sheetbar">
+        <div class="tabs">
+          <button type="button" class="tab active" id="tabBtn1">Tổng quan</button>
+          <button type="button" class="tab" id="tabBtn2">So sánh các năm</button>
+        </div>
+        <button type="button" class="theme-btn" id="themeBtn">Chế độ tối</button>
+      </div>
+
+      <div id="sheet1">
+      <div class="filters card">
+        <div class="f-field">
+          <label for="yearSel">Năm</label>
+          <select id="yearSel"></select>
+        </div>
+        <div class="f-field">
+          <label for="monthSel">Tháng</label>
+          <select id="monthSel"></select>
+        </div>
+        <p class="period-note" id="periodNote"></p>
+      </div>
+
+      <div class="kpis" id="kpis"></div>
+
+      <section class="block">
+        <h2>7 nhóm hàng</h2>
+        <p class="sub">Mỗi nhóm: bán bao nhiêu, BH bao nhiêu, tỉ lệ bao nhiêu.</p>
+        <div class="card" style="padding-top:8px;padding-bottom:8px">
+          <table class="groups">
+            <thead>
+              <tr><th>Nhóm</th><th>Số bán</th><th>Số BH</th><th>Tỉ lệ BH</th></tr>
+            </thead>
+            <tbody id="groupBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="block">
+        <h2>Tỉ lệ BH theo tháng</h2>
+        <p class="sub" id="chartSub">Trên: tỉ lệ BH chung từng tháng. Dưới: mỗi ô là tỉ lệ của 1 nhóm trong 1 tháng — ô càng đậm, tỉ lệ càng cao.</p>
+        <div class="card">
+          <div class="chart-scroll" id="chart"></div>
+          <div id="heatmap"></div>
+          <div class="heat-legend" id="chartLegend"></div>
+        </div>
+      </section>
+
+      <section class="block">
+        <h2>Tỉ lệ BH theo các nhóm</h2>
+        <div class="duo">
+          <div class="card">
+            <h3>Theo tỉ lệ BH</h3>
+            <div class="brand-tools">
+              <div class="f-field">
+                <label for="brandGroupSel">Nhóm hàng</label>
+                <select id="brandGroupSel"></select>
+              </div>
+            </div>
+            <div class="brands" id="brands"></div>
+          </div>
+          <div class="card">
+            <h3>Theo số bán</h3>
+            <div class="brand-tools">
+              <div class="f-field">
+                <label for="brandNameSel">Hãng</label>
+                <select id="brandNameSel"></select>
+              </div>
+            </div>
+            <div class="brands" id="brandsBySold"></div>
+          </div>
+        </div>
+      </section>
+
+      </div>
+
+      <div id="sheet2" hidden>
+        <div class="filters card">
+          <div class="f-field">
+            <label for="cmpStartSel">Năm đầu tiên</label>
+            <select id="cmpStartSel"></select>
+          </div>
+          <div class="f-field">
+            <label for="cmpEndSel">Năm cuối cùng</label>
+            <select id="cmpEndSel"></select>
+          </div>
+          <div class="f-field">
+            <label for="cmpGranSel">Xem theo</label>
+            <select id="cmpGranSel">
+              <option value="month">Tháng</option>
+              <option value="quarter">Quý</option>
+              <option value="year">Năm</option>
+            </select>
+          </div>
+          <p class="period-note" id="cmpNote"></p>
+        </div>
+
+        <section class="block">
+          <h2>Theo thời gian</h2>
+          <p class="sub" id="cmpTimeSub"></p>
+          <div class="card" style="padding-top:8px;padding-bottom:8px">
+            <div class="table-scroll"><table class="cmp" id="cmpTimeTable"></table></div>
+          </div>
+        </section>
+
+        <section class="block">
+          <h2>Tỉ lệ BH theo kỳ</h2>
+          <div class="card">
+            <div class="chart-scroll" id="cmpChart"></div>
+            <div class="legend" id="cmpLegend"></div>
+          </div>
+        </section>
+
+        <section class="block">
+          <h2>Theo nhóm hàng</h2>
+          <div class="card" style="padding-top:8px;padding-bottom:8px">
+            <div class="table-scroll"><table class="cmp" id="cmpGroupTable"></table></div>
+          </div>
+        </section>
+
+        <section class="block">
+          <h2>Hãng qua các năm</h2>
+          <p class="sub">Mỗi hãng 1 dòng, chỉ 2 năm đã chọn: Bán – Bảo hành – Tỉ lệ. Cột cuối: Chênh lệch (%), năm cuối trừ năm đầu.</p>
+          <div class="card">
+            <div class="brand-tools tools-row">
+              <div class="f-field">
+                <label for="cmpBrandStartSel">Năm đầu</label>
+                <select id="cmpBrandStartSel"></select>
+              </div>
+              <div class="f-field">
+                <label for="cmpBrandEndSel">Năm cuối</label>
+                <select id="cmpBrandEndSel"></select>
+              </div>
+              <div class="f-field">
+                <label for="cmpBrandGroupSel">Nhóm hàng</label>
+                <select id="cmpBrandGroupSel"></select>
+              </div>
+              <div class="f-field">
+                <label for="cmpBrandNameSel">Hãng</label>
+                <select id="cmpBrandNameSel"></select>
+              </div>
+            </div>
+            <div class="table-scroll"><table class="cmp" id="cmpBrandTable"></table></div>
+          </div>
+        </section>
+      </div>
+
+      <footer>Nguồn: file bán “Data bán 2026” và file BH 2026. Số đếm theo dòng. Tháng BH lấy theo Ngày nhận (cột D).</footer>
+    </div>
+
+    <script>
+      let DATA, BRAND_GROUPS, BRAND_MONTH;
+      /* Dữ liệu nạp từ dashboard-data.json (cùng thư mục), cập nhật hằng tháng. */
+      fetch("dashboard-data.json").then(r => r.json()).then(j => {
+        DATA = j.data; BRAND_GROUPS = j.brand_groups; BRAND_MONTH = j.brand_month;
+
+      /* Tháng tự rút ra từ data và tự sắp xếp theo thứ tự thời gian thật,
+         nên data năm cũ hơn hay mới hơn đều vào đúng vị trí, không cần sửa code. */
+      function monthSortKey(m) { const p = m.slice(1).split("."); return (2000 + parseInt(p[1], 10)) * 100 + parseInt(p[0], 10); }
+      const MONTHS = (() => {
+        const seen = {};
+        DATA.forEach(r => { seen[r.m] = 1; });
+        return Object.keys(seen).sort((a, b) => monthSortKey(a) - monthSortKey(b));
+      })();
+      const MONTH_LABEL = {};
+      MONTHS.forEach(m => { const p = m.slice(1).split("."); MONTH_LABEL[m] = p[0] + "/20" + p[1]; });
+      const GROUPS = ["MT","Apple","ĐTDĐ","Samsung","Smartwatch","MTB","Máy In"];
+
+      const fmt = n => n.toLocaleString("vi-VN");
+      const pct = (a, b) => b ? (a / b * 100).toLocaleString("vi-VN", {minimumFractionDigits: 2, maximumFractionDigits: 2}) + "%" : "—";
+      /* Ngưỡng màu tỉ lệ BH, xét trên giá trị đã làm tròn 2 chữ số thập phân */
+      const rateCls = r => { if (r === null || r === undefined || isNaN(r)) return ""; const v = Math.round(r * 100) / 100; return v < 2 ? "g" : (v > 2 ? "r" : "y"); };
+      const rateSpan = r => '<span class="num cmp-rate' + (r === null || r === undefined ? "" : " rate-" + rateCls(r)) + '">' + fmtRate(r) + "</span>";
+
+      /* Năm tự rút ra từ các tháng có trong data, sắp xếp tăng dần theo thời gian.
+         Mặc định xem năm mới nhất có trong data. */
+      const YEARS = Array.from(new Set(MONTHS.map(m => yearOf(m)))).sort((a, b) => parseInt(a, 10) - parseInt(b, 10));
+      let selYear = YEARS[YEARS.length - 1];
+      let selMonth = "ALL";
+      let selBrandGroup = "ALL";
+      let selBrandName = "ALL";
+
+      function sum(rows, key) { return rows.reduce((s, r) => s + r[key], 0); }
+      function yearOf(m) { return "20" + m.split(".")[1]; }
+      function monthsOfYear(y) { return y === "ALL" ? MONTHS : MONTHS.filter(m => yearOf(m) === y); }
+      function selectedMonths() { return selMonth === "ALL" ? monthsOfYear(selYear) : [selMonth]; }
+      function periodText() {
+        if (selMonth !== "ALL") return "Đang xem: tháng " + MONTH_LABEL[selMonth] + ".";
+        if (selYear === "ALL") return "Đang xem: cả " + MONTHS.length + " tháng (" + MONTH_LABEL[MONTHS[0]] + " – " + MONTH_LABEL[MONTHS[MONTHS.length - 1]] + ").";
+        const ms = monthsOfYear(selYear);
+        return "Đang xem: cả năm " + selYear + " (" + MONTH_LABEL[ms[0]] + " – " + MONTH_LABEL[ms[ms.length - 1]] + ").";
+      }
+      function chartScopeText() {
+        return selYear === "ALL" ? "Cả " + MONTHS.length + " tháng." : "Năm " + selYear + ".";
+      }
+
+      function buildFilters() {
+        const bg = document.getElementById("brandGroupSel");
+        bg.innerHTML = '<option value="ALL">Tất cả nhóm</option>' + GROUPS.map(g => '<option value="' + g + '">' + g + '</option>').join("");
+        bg.value = selBrandGroup;
+        bg.addEventListener("change", () => { selBrandGroup = bg.value; renderBrands(); });
+        const bn = document.getElementById("brandNameSel");
+        const nameSet = {};
+        MONTHS.forEach(m => (BRAND_MONTH[m] || []).forEach(r => { nameSet[r[0]] = 1; }));
+        bn.innerHTML = '<option value="ALL">Tất cả hãng</option>' + Object.keys(nameSet).sort((a, b) => a.localeCompare(b, "vi")).map(n => '<option value="' + n + '">' + n + "</option>").join("");
+        bn.value = selBrandName;
+        bn.addEventListener("change", () => { selBrandName = bn.value; renderBrandsBySold(); });
+        const ys = document.getElementById("yearSel");
+        ys.innerHTML = YEARS.map(y => '<option value="' + y + '">Năm ' + y + '</option>').join("") +
+          '<option value="ALL">Tất cả (' + YEARS[0] + " – " + YEARS[YEARS.length - 1] + ')</option>';
+        ys.value = selYear;
+        ys.addEventListener("change", () => { selYear = ys.value; selMonth = "ALL"; buildMonthOptions(); renderMain(); });
+        buildMonthOptions();
+      }
+      function buildMonthOptions() {
+        const ms = document.getElementById("monthSel");
+        ms.innerHTML = '<option value="ALL">Tất cả các tháng</option>' + monthsOfYear(selYear).map(m =>
+          '<option value="' + m + '">Tháng ' + MONTH_LABEL[m] + '</option>').join("");
+        ms.value = selMonth;
+        ms.onchange = () => { selMonth = ms.value; renderMain(); };
+      }
+
+      function renderMain() {
+        const months = selectedMonths();
+        const rows = DATA.filter(r => months.indexOf(r.m) >= 0);
+        const sold = sum(rows, "sold"), bh = sum(rows, "bh");
+        document.getElementById("periodNote").textContent = periodText();
+        document.getElementById("chartSub").textContent = "Trên: tỉ lệ BH chung từng tháng. Dưới: mỗi ô là tỉ lệ của 1 nhóm trong 1 tháng — ô càng đậm, tỉ lệ càng cao. " + chartScopeText();
+
+        document.getElementById("kpis").innerHTML =
+          kpi("Số bán", fmt(sold), "Tổng máy bán, 7 nhóm") +
+          kpi("Số BH", fmt(bh), "Tổng máy nhận BH") +
+          kpi("Tỉ lệ BH", pct(bh, sold), "Số BH ÷ Số bán", true);
+
+        const byGroup = GROUPS.map(g => {
+          const gr = rows.filter(r => r.g === g);
+          const s = sum(gr, "sold"), b = sum(gr, "bh");
+          return {g, s, b, rate: s ? b / s * 100 : 0};
+        }).sort((a, b) => b.rate - a.rate);
+        const maxRate = Math.max.apply(null, byGroup.map(x => x.rate).concat([1]));
+
+        let html = byGroup.map(x => {
+          return "<tr>" +
+            '<td class="gname">' + x.g + "</td>" +
+            '<td data-th="Số bán" class="dim-num"><span class="num">' + fmt(x.s) + "</span></td>" +
+            '<td data-th="Số BH" class="dim-num"><span class="num">' + fmt(x.b) + "</span></td>" +
+            '<td data-th="Tỉ lệ BH" class="rate-cell"><span class="rate-line"><span class="rate-bar"><i class="bar-' + rateCls(x.rate) + '" style="width:' + (x.rate / maxRate * 100).toFixed(1) + '%"></i></span><span class="rate-val num rate-' + rateCls(x.rate) + '">' + pct(x.b, x.s) + "</span></span></td>" +
+          "</tr>";
+        }).join("");
+        html += '<tr class="total">' +
+          '<td class="gname">Tổng 7 nhóm</td>' +
+          '<td data-th="Số bán" class="dim-num"><span class="num">' + fmt(sold) + "</span></td>" +
+          '<td data-th="Số BH" class="dim-num"><span class="num">' + fmt(bh) + "</span></td>" +
+          '<td data-th="Tỉ lệ BH" class="rate-cell"><span class="rate-line"><span class="rate-val num rate-' + rateCls(sold ? bh / sold * 100 : null) + '">' + pct(bh, sold) + "</span></span></td>" +
+        "</tr>";
+        document.getElementById("groupBody").innerHTML = html;
+
+        renderBrands();
+        renderBrandsBySold();
+        renderChart();
+      }
+      function kpi(label, value, note, hero) {
+        return '<div class="kpi' + (hero ? " hero" : "") + '"><div class="k-label">' + label + '</div><div class="k-value num">' + value + '</div><div class="k-note">' + note + "</div></div>";
+      }
+
+      function renderBrands() {
+        const agg = {};
+        selectedMonths().forEach(m => (BRAND_MONTH[m] || []).forEach(row => {
+          if (!agg[row[0]]) agg[row[0]] = {name: row[0], sold: 0, bh: 0};
+          agg[row[0]].sold += row[1];
+          agg[row[0]].bh += row[2];
+        }));
+        let all = Object.keys(agg).map(k => agg[k]);
+        if (selBrandGroup !== "ALL") all = all.filter(b => (BRAND_GROUPS[b.name] || []).indexOf(selBrandGroup) >= 0);
+        const ranked = all.filter(b => b.sold > 0)
+          .sort((a, b) => (b.bh / b.sold) - (a.bh / a.sold) || b.bh - a.bh);
+        const noSold = all.filter(b => b.sold === 0 && b.bh > 0)
+          .sort((a, b) => b.bh - a.bh);
+        const max = ranked.length ? ranked[0].bh / ranked[0].sold * 100 : 1;
+        let html = ranked.map(b => {
+          const r = b.bh / b.sold * 100;
+          return '<div class="brand-row">' +
+            '<span class="b-name">' + b.name + "</span>" +
+            '<span class="b-track"><i class="bar-' + rateCls(r) + '" style="width:' + (r / max * 100).toFixed(1) + '%"></i></span>' +
+            '<span class="b-vals"><span class="rate-big num rate-' + rateCls(r) + '">' + pct(b.bh, b.sold) + '</span><span class="vals-small">BH <span class="num">' + fmt(b.bh) + '</span> · Bán <span class="num">' + fmt(b.sold) + "</span></span></span>" +
+          "</div>";
+        }).join("");
+        html += noSold.map(b => {
+          return '<div class="brand-row">' +
+            '<span class="b-name">' + b.name + "</span>" +
+            '<span class="b-track"></span>' +
+            '<span class="b-vals"><span class="rate-big num">—</span><span class="vals-small">BH <span class="num">' + fmt(b.bh) + '</span> · Bán <span class="num">0</span></span></span>' +
+          "</div>";
+        }).join("");
+        if (!html) html = '<p style="margin:0;color:var(--ink-3)">Không có hãng trong nhóm này.</p>';
+        document.getElementById("brands").innerHTML = html;
+      }
+
+      function renderBrandsBySold() {
+        const agg = {};
+        selectedMonths().forEach(m => (BRAND_MONTH[m] || []).forEach(row => {
+          if (!agg[row[0]]) agg[row[0]] = {name: row[0], sold: 0, bh: 0};
+          agg[row[0]].sold += row[1];
+          agg[row[0]].bh += row[2];
+        }));
+        let all = Object.keys(agg).map(k => agg[k]).filter(b => b.sold > 0 || b.bh > 0);
+        if (selBrandName !== "ALL") all = all.filter(b => b.name === selBrandName);
+        all.sort((a, b) => b.sold - a.sold || b.bh - a.bh);
+        const max = all.length ? Math.max.apply(null, all.map(b => b.sold).concat([1])) : 1;
+        let html = all.map(b => {
+          return '<div class="brand-row">' +
+            '<span class="b-name">' + b.name + "</span>" +
+            '<span class="b-track"><i class="bar-' + rateCls(b.sold ? b.bh / b.sold * 100 : null) + '" style="width:' + (b.sold / max * 100).toFixed(1) + '%"></i></span>' +
+            '<span class="b-vals"><span class="rate-big num rate-' + rateCls(b.sold ? b.bh / b.sold * 100 : null) + '">' + pct(b.bh, b.sold) + '</span><span class="vals-small">BH <span class="num">' + fmt(b.bh) + '</span> · Bán <span class="num">' + fmt(b.sold) + "</span></span></span>" +
+          "</div>";
+        }).join("");
+        if (!html) html = '<p style="margin:0;color:var(--ink-3)">Không có số cho hãng này.</p>';
+        document.getElementById("brandsBySold").innerHTML = html;
+      }
+
+      function renderChart() {
+        const months = monthsOfYear(selYear);
+        const n = months.length;
+        const fmtV = v => v.toLocaleString("vi-VN", {minimumFractionDigits: 2, maximumFractionDigits: 2}) + "%";
+        const selIdx = selMonth === "ALL" ? -1 : months.indexOf(selMonth);
+
+        /* --- Phần trên: cột tỉ lệ BH chung, chỉ 1 dãy số nên nhìn thoáng --- */
+        const overall = months.map(m => { const r = DATA.filter(x => x.m === m); return sum(r, "bh") / sum(r, "sold") * 100; });
+        const maxO = Math.max.apply(null, overall.concat([1]));
+        const maxV = Math.max(2, Math.ceil(maxO * 1.25));
+        const W = 760, H = 196, PL = 42, PR = 10, PT = 28, PB = 30;
+        const iw = W - PL - PR, ih = H - PT - PB;
+        const x = i => PL + iw * (i + 0.5) / n;
+        const y = v => PT + ih - ih * v / maxV;
+        const bw = Math.min(44, iw / n * 0.5);
+        let s = '<p class="ov-title">Tỉ lệ BH chung theo tháng</p>';
+        s += '<svg class="chart" viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Biểu đồ cột tỉ lệ bảo hành chung theo tháng">';
+        const stepO = maxV <= 3 ? 1 : 2;
+        for (let v = 0; v <= maxV; v += stepO) {
+          s += '<line x1="' + PL + '" y1="' + y(v) + '" x2="' + (W - PR) + '" y2="' + y(v) + '" stroke="var(--chart-grid)" stroke-width="1"/>';
+          s += '<text x="' + (PL - 8) + '" y="' + (y(v) + 4) + '" text-anchor="end" font-size="11" fill="var(--ink-3)">' + v + "%</text>";
+        }
+        overall.forEach((v, i) => {
+          const isSel = selIdx === i;
+          const dim = selIdx >= 0 && !isSel;
+          s += '<rect x="' + (x(i) - bw / 2) + '" y="' + y(v) + '" width="' + bw + '" height="' + (y(0) - y(v)) + '" rx="4" fill="var(--bar)" opacity="' + (dim ? "0.25" : "1") + '"><title>Tỉ lệ chung ' + MONTH_LABEL[months[i]] + ": " + fmtV(v) + "</title></rect>";
+          s += '<text x="' + x(i) + '" y="' + (y(v) - 7) + '" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink)">' + fmtV(v) + "</text>";
+          s += '<text x="' + x(i) + '" y="' + (H - 10) + '" text-anchor="middle" font-size="11.5" font-weight="' + (isSel ? "800" : "500") + '" fill="' + (isSel ? "var(--accent)" : "var(--ink-3)") + '">' + MONTH_LABEL[months[i]] + "</text>";
+        });
+        s += "</svg>";
+        document.getElementById("chart").innerHTML = s;
+
+        /* --- Phần dưới: bảng màu theo nhóm × tháng, thay cho 7 đường chồng nhau --- */
+        const rows = GROUPS.map(g => {
+          const gr = DATA.filter(r => months.indexOf(r.m) >= 0 && r.g === g);
+          const sTot = sum(gr, "sold"), bTot = sum(gr, "bh");
+          const vals = months.map(m => {
+            const r = DATA.filter(x => x.m === m && x.g === g);
+            const sld = sum(r, "sold");
+            return sld ? sum(r, "bh") / sld * 100 : 0;
+          });
+          return {g: g, vals: vals, avg: sTot ? bTot / sTot * 100 : 0, sold: sTot, bh: bTot};
+        }).sort((a, b) => b.avg - a.avg);
+        let maxCell = 0;
+        rows.forEach(r => r.vals.forEach(v => { if (v > maxCell) maxCell = v; }));
+        if (!maxCell) maxCell = 1;
+
+        const cols = "repeat(" + n + ", 1fr)";
+        let h = '<div class="hm-head"><div class="hm-gname"></div><div class="hm-cells" style="grid-template-columns:' + cols + '">';
+        months.forEach((m, i) => { h += '<div' + (i === selIdx ? ' class="sel"' : "") + ">" + MONTH_LABEL[m] + "</div>"; });
+        h += '</div><div class="hm-avg-head">Trung bình</div></div>';
+        rows.forEach(r => {
+          h += '<div class="hm-row"><div class="hm-gname">' + r.g + '</div><div class="hm-cells" style="grid-template-columns:' + cols + '">';
+          r.vals.forEach((v, i) => {
+            const t = Math.pow(v / maxCell, 0.6);
+            const alpha = (0.06 + t * 0.86).toFixed(2);
+            const fg = t > 0.62 ? "#ffffff" : "var(--ink)";
+            h += '<div class="hm-cell' + (i === selIdx ? " sel" : "") + '" style="background:rgba(228,87,46,' + alpha + ');color:' + fg + '" title="' + r.g + " · " + MONTH_LABEL[months[i]] + ": " + fmtV(v) + '">' +
+              '<span class="hm-m">' + MONTH_LABEL[months[i]] + '</span><span class="hm-v num">' + fmtV(v) + "</span></div>";
+          });
+          h += '</div><div class="hm-avg"><span class="hm-avg-label">Trung bình cả kỳ</span><span class="rate-big num rate-' + rateCls(r.avg) + '">' + fmtV(r.avg) + "</span></div></div>";
+        });
+        document.getElementById("heatmap").innerHTML = h;
+
+        document.getElementById("chartLegend").innerHTML =
+          "<span>Tỉ lệ thấp</span>" +
+          '<span class="heat-scale" aria-hidden="true"></span>' +
+          "<span>Tỉ lệ cao (" + fmtV(maxCell) + ' là cao nhất)</span>' +
+          '<span style="color:var(--ink-3)">Cột phải: tỉ lệ trung bình của nhóm trong cả kỳ đang xem. Nhóm xếp từ tỉ lệ cao xuống thấp.</span>';
+      }
+
+      /* ===== Sheet 2: So sánh các năm ===== */
+      let cmpStart = YEARS[0];
+      let cmpEnd = YEARS[YEARS.length - 1];
+      let cmpGran = "month";
+      let cmpBuilt = false;
+
+      /* Màu gán theo vị trí của năm trong danh sách đã sắp xếp (năm sớm nhất lấy màu đầu),
+         nên năm nào xuất hiện trong data — cũ hơn hay mới hơn — cũng có màu riêng, không bị xám. */
+      const CMP_PALETTE = ["#2f7fe0", "#f59e0b", "#00a06b", "#e4572e", "#8b5cf6", "#0e9594", "#d6336c", "#64748b"];
+      function cmpColor(y) { const i = YEARS.indexOf(y); return CMP_PALETTE[(i < 0 ? 0 : i) % CMP_PALETTE.length]; }
+      function cmpYears() {
+        let a = parseInt(cmpStart, 10), b = parseInt(cmpEnd, 10);
+        if (a > b) { const t = a; a = b; b = t; }
+        const ys = [];
+        for (let y = a; y <= b; y++) ys.push(String(y));
+        return ys;
+      }
+      function monthKey(y, m) { return "M" + String(m).padStart(2, "0") + "." + y.slice(2); }
+      function aggPeriod(y, monthNums) {
+        const keys = monthNums.map(m => monthKey(y, m));
+        const rows = DATA.filter(r => keys.indexOf(r.m) >= 0);
+        if (!rows.length) return null;
+        return {sold: sum(rows, "sold"), bh: sum(rows, "bh")};
+      }
+      function aggYearGroup(y, g) {
+        const keys = monthsOfYear(y);
+        const rows = DATA.filter(r => keys.indexOf(r.m) >= 0 && r.g === g);
+        if (!rows.length) return null;
+        return {sold: sum(rows, "sold"), bh: sum(rows, "bh")};
+      }
+      function cmpPeriods() {
+        if (cmpGran === "quarter") return [{label: "Quý 1", months: [1, 2, 3]}, {label: "Quý 2", months: [4, 5, 6]}, {label: "Quý 3", months: [7, 8, 9]}, {label: "Quý 4", months: [10, 11, 12]}];
+        if (cmpGran === "year") return [{label: "Cả năm", months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]}];
+        const ps = [];
+        for (let m = 1; m <= 12; m++) ps.push({label: "Tháng " + m, months: [m]});
+        return ps;
+      }
+      function rateOf(a) { return a && a.sold ? a.bh / a.sold * 100 : null; }
+      function fmtRate(r) { return r === null ? "—" : r.toLocaleString("vi-VN", {minimumFractionDigits: 2, maximumFractionDigits: 2}) + "%"; }
+      function fmtDelta(r2, r1) {
+        if (r2 === null || r1 === null) return '<span class="num">—</span>';
+        const d = r2 - r1;
+        const cls = d > 0 ? "d-up" : (d < 0 ? "d-down" : "");
+        const txt = (d > 0 ? "+" : "") + d.toLocaleString("vi-VN", {minimumFractionDigits: 2, maximumFractionDigits: 2}) + "%";
+        return '<span class="num ' + cls + '">' + txt + "</span>";
+      }
+      function fmtAvg(rates) {
+        const vals = rates.filter(r => r !== null);
+        if (!vals.length) return '<span class="num">—</span>';
+        const avg = vals.reduce((s, v) => s + v, 0) / vals.length;
+        return '<span class="num cmp-rate rate-' + rateCls(avg) + '">' + avg.toLocaleString("vi-VN", {minimumFractionDigits: 2, maximumFractionDigits: 2}) + "%</span>";
+      }
+      function periodCells(years, monthNums) {
+        return years.map(y => aggPeriod(y, monthNums));
+      }
+      function periodRow(label, years, monthNums, total) {
+        const cells = periodCells(years, monthNums);
+        const rates = cells.map(rateOf);
+        let h = "<tr" + (total ? ' class="total"' : "") + '><td class="kname">' + label + "</td>";
+        cells.forEach((c, i) => {
+          h += '<td data-th="' + years[i] + ' · Bán"><span class="num cmp-dim">' + (c ? fmt(c.sold) : "—") + "</span></td>";
+          h += '<td data-th="' + years[i] + ' · Bảo hành"><span class="num cmp-dim">' + (c ? fmt(c.bh) : "—") + "</span></td>";
+          h += '<td data-th="' + years[i] + ' · Tỉ lệ">' + rateSpan(rates[i]) + "</td>";
+        });
+        if (years.length > 1) h += '<td data-th="Tỉ lệ trung bình (%)">' + fmtAvg(rates) + "</td>";
+        return h + "</tr>";
+      }
+
+      function renderCompare() {
+        const years = cmpYears();
+        const periods = cmpPeriods();
+        document.getElementById("cmpNote").textContent = "Đang so: chu kì năm " + years[0] + " – năm " + years[years.length - 1] + " (" + years.length + " năm). Xem theo " + (cmpGran === "month" ? "tháng" : cmpGran === "quarter" ? "quý" : "năm") + ".";
+        document.getElementById("cmpTimeSub").textContent = "Mỗi năm: Bán – Bảo hành – Tỉ lệ. Cột cuối Tỉ lệ trung bình (%): cộng tỉ lệ các năm trong chu kì rồi chia cho số năm.";
+
+        let th = '<thead><tr><th rowspan="2">Kỳ</th>';
+        years.forEach(y => { th += '<th class="yr" colspan="3">Năm ' + y + "</th>"; });
+        if (years.length > 1) th += '<th rowspan="2">Tỉ lệ trung bình (%)</th>';
+        th += "</tr><tr>";
+        years.forEach(() => { th += "<th>Bán</th><th>Bảo hành</th><th>Tỉ lệ</th>"; });
+        th += "</tr></thead><tbody>";
+        periods.forEach(p => { th += periodRow(p.label, years, p.months, false); });
+        if (cmpGran !== "year") th += periodRow("Cả năm", years, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], true);
+        th += "</tbody>";
+        document.getElementById("cmpTimeTable").innerHTML = th;
+
+        let gh = '<thead><tr><th rowspan="2">Nhóm</th>';
+        years.forEach(y => { gh += '<th class="yr" colspan="3">Năm ' + y + "</th>"; });
+        if (years.length > 1) gh += '<th rowspan="2">Chênh lệch (%)</th>';
+        gh += "</tr><tr>";
+        years.forEach(() => { gh += "<th>Bán</th><th>Bảo hành</th><th>Tỉ lệ</th>"; });
+        gh += "</tr></thead><tbody>";
+        GROUPS.forEach(g => {
+          const cells = years.map(y => aggYearGroup(y, g));
+          const rates = cells.map(rateOf);
+          gh += '<tr><td class="kname">' + g + "</td>";
+          cells.forEach((c, i) => {
+            gh += '<td data-th="' + years[i] + ' · Bán"><span class="num cmp-dim">' + (c ? fmt(c.sold) : "—") + "</span></td>";
+            gh += '<td data-th="' + years[i] + ' · Bảo hành"><span class="num cmp-dim">' + (c ? fmt(c.bh) : "—") + "</span></td>";
+            gh += '<td data-th="' + years[i] + ' · Tỉ lệ">' + rateSpan(rates[i]) + "</td>";
+          });
+          if (years.length > 1) gh += '<td data-th="Chênh lệch (%)">' + fmtDelta(rates[rates.length - 1], rates[0]) + "</td>";
+          gh += "</tr>";
+        });
+        const totCells = years.map(y => aggPeriod(y, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]));
+        const totRates = totCells.map(rateOf);
+        gh += '<tr class="total"><td class="kname">Tổng 7 nhóm</td>';
+        totCells.forEach((c, i) => {
+          gh += '<td data-th="' + years[i] + ' · Bán"><span class="num cmp-dim">' + (c ? fmt(c.sold) : "—") + "</span></td>";
+          gh += '<td data-th="' + years[i] + ' · Bảo hành"><span class="num cmp-dim">' + (c ? fmt(c.bh) : "—") + "</span></td>";
+          gh += '<td data-th="' + years[i] + ' · Tỉ lệ">' + rateSpan(totRates[i]) + "</td>";
+        });
+        if (years.length > 1) gh += '<td data-th="Chênh lệch (%)">' + fmtDelta(totRates[totRates.length - 1], totRates[0]) + "</td>";
+        gh += "</tr></tbody>";
+        document.getElementById("cmpGroupTable").innerHTML = gh;
+
+        const series = years.map(y => periods.map(p => rateOf(aggPeriod(y, p.months))));
+        let maxRate = 0;
+        series.forEach(sv => sv.forEach(v => { if (v !== null && v > maxRate) maxRate = v; }));
+        const maxV = Math.max(3, Math.ceil(maxRate * 1.15));
+        const W = 720, H = 300, PL = 44, PR = 12, PT = 22, PB = 34;
+        const n = periods.length;
+        const iw = W - PL - PR, ih = H - PT - PB;
+        const x = i => n === 1 ? PL + iw / 2 : PL + iw * i / (n - 1);
+        const yv = v => PT + ih - ih * v / maxV;
+        let s = '<svg class="chart" viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Biểu đồ so sánh tỉ lệ bảo hành các năm">';
+        const step = maxV <= 4 ? 1 : 2;
+        for (let v = 0; v <= maxV; v += step) {
+          s += '<line x1="' + PL + '" y1="' + yv(v) + '" x2="' + (W - PR) + '" y2="' + yv(v) + '" stroke="var(--chart-grid)" stroke-width="1"/>';
+          s += '<text x="' + (PL - 8) + '" y="' + (yv(v) + 4) + '" text-anchor="end" font-size="11" fill="var(--ink-3)">' + v + "%</text>";
+        }
+        periods.forEach((p, i) => {
+          s += '<text x="' + x(i) + '" y="' + (H - 12) + '" text-anchor="middle" font-size="11" fill="var(--ink-3)">' + (cmpGran === "month" ? "T" + (i + 1) : p.label) + "</text>";
+        });
+        series.forEach((vals, yi) => {
+          const color = cmpColor(years[yi]);
+          let d = "";
+          vals.forEach((v, i) => {
+            if (v === null) return;
+            const prev = i > 0 ? vals[i - 1] : null;
+            d += (i === 0 || prev === null ? "M" : "L") + x(i).toFixed(1) + " " + yv(v).toFixed(1) + " ";
+          });
+          if (d) s += '<path d="' + d + '" fill="none" stroke="' + color + '" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>';
+          vals.forEach((v, i) => {
+            if (v !== null) s += '<circle cx="' + x(i) + '" cy="' + yv(v) + '" r="3.5" fill="' + color + '"><title>Năm ' + years[yi] + " " + periods[i].label + ": " + fmtRate(v) + "</title></circle>";
+          });
+        });
+        s += "</svg>";
+        document.getElementById("cmpChart").innerHTML = s;
+        document.getElementById("cmpLegend").innerHTML = years.map(y => '<span><i class="swatch line2" style="background:' + cmpColor(y) + '"></i> Năm ' + y + "</span>").join("");
+
+        renderCmpBrands();
+      }
+
+      let cmpBrandGroup = "ALL";
+      let cmpBrandName = "ALL";
+      let cmpBrandStart = YEARS[0];
+      let cmpBrandEnd = YEARS[YEARS.length - 1];
+
+      function cmpBrandYears() {
+        const a = parseInt(cmpBrandStart, 10), b = parseInt(cmpBrandEnd, 10);
+        if (a === b) return [String(a)];
+        return [String(Math.min(a, b)), String(Math.max(a, b))];
+      }
+
+      function renderCmpBrands() {
+        const years = cmpBrandYears();
+        const perYear = years.map(y => {
+          const agg = {};
+          monthsOfYear(y).forEach(m => (BRAND_MONTH[m] || []).forEach(row => {
+            if (!agg[row[0]]) agg[row[0]] = {sold: 0, bh: 0};
+            agg[row[0]].sold += row[1];
+            agg[row[0]].bh += row[2];
+          }));
+          return agg;
+        });
+        const nameSet = {};
+        perYear.forEach(agg => Object.keys(agg).forEach(n => { nameSet[n] = 1; }));
+        let rows = Object.keys(nameSet).map(n => {
+          const cells = perYear.map(agg => agg[n] || null);
+          return {name: n, cells: cells, rates: cells.map(c => rateOf(c))};
+        }).filter(r => r.cells.some(c => c && (c.sold > 0 || c.bh > 0)));
+        if (cmpBrandGroup !== "ALL") rows = rows.filter(r => (BRAND_GROUPS[r.name] || []).indexOf(cmpBrandGroup) >= 0);
+        if (cmpBrandName !== "ALL") rows = rows.filter(r => r.name === cmpBrandName);
+        const li = years.length - 1;
+        rows.sort((a, b) => {
+          const sa = a.cells[li] ? a.cells[li].sold : 0, sb = b.cells[li] ? b.cells[li].sold : 0;
+          return sb - sa || ((b.rates[li] || 0) - (a.rates[li] || 0));
+        });
+        let h = '<thead><tr><th rowspan="2">Hãng</th>';
+        years.forEach(y => { h += '<th class="yr" colspan="3">Năm ' + y + "</th>"; });
+        if (years.length > 1) h += '<th rowspan="2">Chênh lệch (%)</th>';
+        h += "</tr><tr>";
+        years.forEach(() => { h += "<th>Bán</th><th>Bảo hành</th><th>Tỉ lệ</th>"; });
+        h += "</tr></thead><tbody>";
+        rows.forEach(r => {
+          h += '<tr><td class="kname">' + r.name + "</td>";
+          r.cells.forEach((c, i) => {
+            h += '<td data-th="' + years[i] + ' · Bán"><span class="num cmp-dim">' + (c ? fmt(c.sold) : "—") + "</span></td>";
+            h += '<td data-th="' + years[i] + ' · Bảo hành"><span class="num cmp-dim">' + (c ? fmt(c.bh) : "—") + "</span></td>";
+            h += '<td data-th="' + years[i] + ' · Tỉ lệ">' + rateSpan(r.rates[i]) + "</td>";
+          });
+          if (years.length > 1) h += '<td data-th="Chênh lệch (%)">' + fmtDelta(r.rates[li], r.rates[0]) + "</td>";
+          h += "</tr>";
+        });
+        h += "</tbody>";
+        if (!rows.length) h = '<tbody><tr><td style="text-align:left;color:var(--ink-3)">Không có hãng trong nhóm này.</td></tr></tbody>';
+        document.getElementById("cmpBrandTable").innerHTML = h;
+      }
+
+      function initCompare() {
+        const ys = YEARS.slice();
+        const ss = document.getElementById("cmpStartSel");
+        ss.innerHTML = ys.map(y => '<option value="' + y + '">Năm ' + y + "</option>").join("");
+        ss.value = cmpStart;
+        const es = document.getElementById("cmpEndSel");
+        es.innerHTML = ys.map(y => '<option value="' + y + '">Năm ' + y + "</option>").join("");
+        es.value = cmpEnd;
+        ss.addEventListener("change", () => {
+          cmpStart = ss.value;
+          if (parseInt(cmpStart, 10) > parseInt(cmpEnd, 10)) { cmpEnd = cmpStart; es.value = cmpEnd; }
+          renderCompare();
+        });
+        es.addEventListener("change", () => {
+          cmpEnd = es.value;
+          if (parseInt(cmpEnd, 10) < parseInt(cmpStart, 10)) { cmpStart = cmpEnd; ss.value = cmpStart; }
+          renderCompare();
+        });
+        const gs = document.getElementById("cmpGranSel");
+        gs.value = cmpGran;
+        gs.addEventListener("change", () => { cmpGran = gs.value; renderCompare(); });
+        const bs = document.getElementById("cmpBrandStartSel");
+        bs.innerHTML = ys.map(y => '<option value="' + y + '">Năm ' + y + "</option>").join("");
+        bs.value = cmpBrandStart;
+        bs.addEventListener("change", () => { cmpBrandStart = bs.value; renderCmpBrands(); });
+        const be = document.getElementById("cmpBrandEndSel");
+        be.innerHTML = ys.map(y => '<option value="' + y + '">Năm ' + y + "</option>").join("");
+        be.value = cmpBrandEnd;
+        be.addEventListener("change", () => { cmpBrandEnd = be.value; renderCmpBrands(); });
+        const cg = document.getElementById("cmpBrandGroupSel");
+        cg.innerHTML = '<option value="ALL">Tất cả nhóm</option>' + GROUPS.map(g => '<option value="' + g + '">' + g + '</option>').join("");
+        cg.value = cmpBrandGroup;
+        cg.addEventListener("change", () => { cmpBrandGroup = cg.value; renderCmpBrands(); });
+        const cb = document.getElementById("cmpBrandNameSel");
+        const cmpNameSet = {};
+        MONTHS.forEach(m => (BRAND_MONTH[m] || []).forEach(r => { cmpNameSet[r[0]] = 1; }));
+        cb.innerHTML = '<option value="ALL">Tất cả hãng</option>' + Object.keys(cmpNameSet).sort((a, b) => a.localeCompare(b, "vi")).map(n => '<option value="' + n + '">' + n + "</option>").join("");
+        cb.value = cmpBrandName;
+        cb.addEventListener("change", () => { cmpBrandName = cb.value; renderCmpBrands(); });
+      }
+
+      /* Tabs + theme */
+      const tabBtn1 = document.getElementById("tabBtn1");
+      const tabBtn2 = document.getElementById("tabBtn2");
+      function showSheet(nSheet) {
+        document.getElementById("sheet1").hidden = nSheet !== 1;
+        document.getElementById("sheet2").hidden = nSheet !== 2;
+        tabBtn1.classList.toggle("active", nSheet === 1);
+        tabBtn2.classList.toggle("active", nSheet === 2);
+        if (nSheet === 2 && !cmpBuilt) { cmpBuilt = true; renderCompare(); }
+      }
+      tabBtn1.addEventListener("click", () => showSheet(1));
+      tabBtn2.addEventListener("click", () => showSheet(2));
+
+      const themeBtn = document.getElementById("themeBtn");
+      themeBtn.addEventListener("click", () => {
+        const root = document.documentElement;
+        const dark = root.getAttribute("data-theme") !== "dark";
+        root.setAttribute("data-theme", dark ? "dark" : "light");
+        themeBtn.textContent = dark ? "Chế độ sáng" : "Chế độ tối";
+      });
+
+      buildFilters();
+      renderMain();
+      initCompare();
+      }).catch(() => { document.getElementById("periodNote").textContent = "Không tải được dữ liệu. Vui lòng tải lại trang."; });
+    </script>
+  </body>
+</html>
