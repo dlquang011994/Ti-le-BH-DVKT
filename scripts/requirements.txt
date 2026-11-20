@@ -1,0 +1,4 @@
+# Monthly-run dependencies for the BH dashboard (GitHub Actions).
+openpyxl>=3.1
+google-api-python-client>=2.0
+google-auth>=2.0
