@@ -1,0 +1,51 @@
+name: Refresh dashboard data
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Ngày 5 mỗi tháng, lúc 02:00 UTC (09:00 giờ Việt Nam)
+    - cron: "0 2 5 * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-dashboard-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Run monthly update
+        run: python scripts/monthly_run.py
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          REVIEW_SHEET_ID: ${{ secrets.REVIEW_SHEET_ID }}
+          # Biến này không bắt buộc: nếu chưa đặt trong repo thì GitHub gửi
+          # giá trị rỗng và script tự dùng thư mục Drive mặc định.
+          DRIVE_FOLDER_ID: ${{ vars.DRIVE_FOLDER_ID }}
+
+      - name: Commit updated data if changed
+        run: |
+          if git status --porcelain -- dashboard-data.json data/mapping.csv | grep -q .; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add dashboard-data.json data/mapping.csv
+            git commit -m "chore: refresh dashboard data [skip ci]"
+            git push
+          else
+            echo "No changes to dashboard-data.json or data/mapping.csv; nothing to commit."
+          fi
