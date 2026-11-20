@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-11-19T08:37:26Z",
+  "generated": "2026-11-20T04:32:26",
   "months": [
    "M10.25",
    "M11.25",
@@ -15,9 +15,8 @@
    "M08.26",
    "M09.26"
   ],
-  "sales_rows_total": 1793993,
-  "warranty_total": 30150,
-  "brand_groups_source": "derived from source files (sales col A + warranty col J after locked merges); Loai-only brands omitted"
+  "sales_rows_total": 1793982,
+  "warranty_total": 30150
  },
  "data": [
   {
