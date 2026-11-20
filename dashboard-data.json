@@ -1,0 +1,6041 @@
+{
+ "meta": {
+  "generated": "2026-11-19T08:37:26Z",
+  "months": [
+   "M10.25",
+   "M11.25",
+   "M12.25",
+   "M01.26",
+   "M02.26",
+   "M03.26",
+   "M04.26",
+   "M05.26",
+   "M06.26",
+   "M07.26",
+   "M08.26",
+   "M09.26"
+  ],
+  "sales_rows_total": 1793993,
+  "warranty_total": 30150,
+  "brand_groups_source": "derived from source files (sales col A + warranty col J after locked merges); Loai-only brands omitted"
+ },
+ "data": [
+  {
+   "m": "M10.25",
+   "g": "MT",
+   "sold": 22607,
+   "bh": 1359,
+   "frtX": 190,
+   "brandX": 31,
+   "acc": 55,
+   "early": 208,
+   "earlyKnown": 1323
+  },
+  {
+   "m": "M10.25",
+   "g": "Apple",
+   "sold": 62867,
+   "bh": 458,
+   "frtX": 69,
+   "brandX": 26,
+   "acc": 44,
+   "early": 108,
+   "earlyKnown": 352
+  },
+  {
+   "m": "M10.25",
+   "g": "ĐTDĐ",
+   "sold": 41950,
+   "bh": 907,
+   "frtX": 108,
+   "brandX": 78,
+   "acc": 26,
+   "early": 127,
+   "earlyKnown": 469
+  },
+  {
+   "m": "M10.25",
+   "g": "Samsung",
+   "sold": 19070,
+   "bh": 499,
+   "frtX": 57,
+   "brandX": 0,
+   "acc": 13,
+   "early": 73,
+   "earlyKnown": 263
+  },
+  {
+   "m": "M10.25",
+   "g": "Smartwatch",
+   "sold": 9249,
+   "bh": 215,
+   "frtX": 27,
+   "brandX": 52,
+   "acc": 21,
+   "early": 49,
+   "earlyKnown": 212
+  },
+  {
+   "m": "M10.25",
+   "g": "MTB",
+   "sold": 3288,
+   "bh": 63,
+   "frtX": 8,
+   "brandX": 6,
+   "acc": 5,
+   "early": 6,
+   "earlyKnown": 43
+  },
+  {
+   "m": "M10.25",
+   "g": "Máy In",
+   "sold": 1010,
+   "bh": 10,
+   "frtX": 1,
+   "brandX": 2,
+   "acc": 0,
+   "early": 3,
+   "earlyKnown": 10
+  },
+  {
+   "m": "M11.25",
+   "g": "MT",
+   "sold": 16966,
+   "bh": 1196,
+   "frtX": 82,
+   "brandX": 36,
+   "acc": 55,
+   "early": 85,
+   "earlyKnown": 1161
+  },
+  {
+   "m": "M11.25",
+   "g": "Apple",
+   "sold": 57940,
+   "bh": 314,
+   "frtX": 52,
+   "brandX": 26,
+   "acc": 34,
+   "early": 69,
+   "earlyKnown": 276
+  },
+  {
+   "m": "M11.25",
+   "g": "ĐTDĐ",
+   "sold": 33703,
+   "bh": 488,
+   "frtX": 86,
+   "brandX": 54,
+   "acc": 44,
+   "early": 98,
+   "earlyKnown": 415
+  },
+  {
+   "m": "M11.25",
+   "g": "Samsung",
+   "sold": 16480,
+   "bh": 463,
+   "frtX": 50,
+   "brandX": 0,
+   "acc": 7,
+   "early": 60,
+   "earlyKnown": 253
+  },
+  {
+   "m": "M11.25",
+   "g": "Smartwatch",
+   "sold": 6954,
+   "bh": 179,
+   "frtX": 21,
+   "brandX": 39,
+   "acc": 23,
+   "early": 32,
+   "earlyKnown": 175
+  },
+  {
+   "m": "M11.25",
+   "g": "MTB",
+   "sold": 3666,
+   "bh": 57,
+   "frtX": 13,
+   "brandX": 5,
+   "acc": 3,
+   "early": 11,
+   "earlyKnown": 41
+  },
+  {
+   "m": "M11.25",
+   "g": "Máy In",
+   "sold": 829,
+   "bh": 9,
+   "frtX": 0,
+   "brandX": 1,
+   "acc": 0,
+   "early": 1,
+   "earlyKnown": 9
+  },
+  {
+   "m": "M12.25",
+   "g": "MT",
+   "sold": 16843,
+   "bh": 1016,
+   "frtX": 68,
+   "brandX": 29,
+   "acc": 41,
+   "early": 78,
+   "earlyKnown": 990
+  },
+  {
+   "m": "M12.25",
+   "g": "Apple",
+   "sold": 63927,
+   "bh": 330,
+   "frtX": 72,
+   "brandX": 29,
+   "acc": 45,
+   "early": 96,
+   "earlyKnown": 290
+  },
+  {
+   "m": "M12.25",
+   "g": "ĐTDĐ",
+   "sold": 47003,
+   "bh": 533,
+   "frtX": 69,
+   "brandX": 53,
+   "acc": 29,
+   "early": 88,
+   "earlyKnown": 335
+  },
+  {
+   "m": "M12.25",
+   "g": "Samsung",
+   "sold": 17955,
+   "bh": 939,
+   "frtX": 62,
+   "brandX": 0,
+   "acc": 10,
+   "early": 61,
+   "earlyKnown": 272
+  },
+  {
+   "m": "M12.25",
+   "g": "Smartwatch",
+   "sold": 7196,
+   "bh": 153,
+   "frtX": 14,
+   "brandX": 23,
+   "acc": 23,
+   "early": 19,
+   "earlyKnown": 149
+  },
+  {
+   "m": "M12.25",
+   "g": "MTB",
+   "sold": 3740,
+   "bh": 70,
+   "frtX": 6,
+   "brandX": 10,
+   "acc": 8,
+   "early": 6,
+   "earlyKnown": 45
+  },
+  {
+   "m": "M12.25",
+   "g": "Máy In",
+   "sold": 1094,
+   "bh": 7,
+   "frtX": 1,
+   "brandX": 1,
+   "acc": 0,
+   "early": 1,
+   "earlyKnown": 7
+  },
+  {
+   "m": "M01.26",
+   "g": "MT",
+   "sold": 15472,
+   "bh": 981,
+   "frtX": 64,
+   "brandX": 22,
+   "acc": 45,
+   "early": 67,
+   "earlyKnown": 956
+  },
+  {
+   "m": "M01.26",
+   "g": "Apple",
+   "sold": 58738,
+   "bh": 290,
+   "frtX": 65,
+   "brandX": 21,
+   "acc": 36,
+   "early": 81,
+   "earlyKnown": 234
+  },
+  {
+   "m": "M01.26",
+   "g": "ĐTDĐ",
+   "sold": 39323,
+   "bh": 397,
+   "frtX": 58,
+   "brandX": 44,
+   "acc": 13,
+   "early": 71,
+   "earlyKnown": 271
+  },
+  {
+   "m": "M01.26",
+   "g": "Samsung",
+   "sold": 17931,
+   "bh": 234,
+   "frtX": 34,
+   "brandX": 1,
+   "acc": 3,
+   "early": 34,
+   "earlyKnown": 190
+  },
+  {
+   "m": "M01.26",
+   "g": "Smartwatch",
+   "sold": 8832,
+   "bh": 175,
+   "frtX": 13,
+   "brandX": 38,
+   "acc": 31,
+   "early": 26,
+   "earlyKnown": 169
+  },
+  {
+   "m": "M01.26",
+   "g": "MTB",
+   "sold": 3059,
+   "bh": 55,
+   "frtX": 8,
+   "brandX": 6,
+   "acc": 7,
+   "early": 7,
+   "earlyKnown": 38
+  },
+  {
+   "m": "M01.26",
+   "g": "Máy In",
+   "sold": 938,
+   "bh": 7,
+   "frtX": 3,
+   "brandX": 0,
+   "acc": 0,
+   "early": 3,
+   "earlyKnown": 7
+  },
+  {
+   "m": "M02.26",
+   "g": "MT",
+   "sold": 13188,
+   "bh": 611,
+   "frtX": 43,
+   "brandX": 12,
+   "acc": 29,
+   "early": 49,
+   "earlyKnown": 602
+  },
+  {
+   "m": "M02.26",
+   "g": "Apple",
+   "sold": 47772,
+   "bh": 199,
+   "frtX": 35,
+   "brandX": 13,
+   "acc": 38,
+   "early": 54,
+   "earlyKnown": 186
+  },
+  {
+   "m": "M02.26",
+   "g": "ĐTDĐ",
+   "sold": 37567,
+   "bh": 278,
+   "frtX": 53,
+   "brandX": 34,
+   "acc": 13,
+   "early": 60,
+   "earlyKnown": 215
+  },
+  {
+   "m": "M02.26",
+   "g": "Samsung",
+   "sold": 15058,
+   "bh": 161,
+   "frtX": 27,
+   "brandX": 3,
+   "acc": 2,
+   "early": 35,
+   "earlyKnown": 126
+  },
+  {
+   "m": "M02.26",
+   "g": "Smartwatch",
+   "sold": 7333,
+   "bh": 106,
+   "frtX": 13,
+   "brandX": 24,
+   "acc": 15,
+   "early": 28,
+   "earlyKnown": 105
+  },
+  {
+   "m": "M02.26",
+   "g": "MTB",
+   "sold": 3140,
+   "bh": 27,
+   "frtX": 9,
+   "brandX": 1,
+   "acc": 3,
+   "early": 10,
+   "earlyKnown": 24
+  },
+  {
+   "m": "M02.26",
+   "g": "Máy In",
+   "sold": 460,
+   "bh": 2,
+   "frtX": 0,
+   "brandX": 1,
+   "acc": 0,
+   "early": 1,
+   "earlyKnown": 2
+  },
+  {
+   "m": "M03.26",
+   "g": "MT",
+   "sold": 20747,
+   "bh": 1160,
+   "frtX": 93,
+   "brandX": 36,
+   "acc": 61,
+   "early": 93,
+   "earlyKnown": 1126
+  },
+  {
+   "m": "M03.26",
+   "g": "Apple",
+   "sold": 48083,
+   "bh": 319,
+   "frtX": 66,
+   "brandX": 22,
+   "acc": 42,
+   "early": 83,
+   "earlyKnown": 291
+  },
+  {
+   "m": "M03.26",
+   "g": "ĐTDĐ",
+   "sold": 36306,
+   "bh": 578,
+   "frtX": 72,
+   "brandX": 47,
+   "acc": 32,
+   "early": 96,
+   "earlyKnown": 339
+  },
+  {
+   "m": "M03.26",
+   "g": "Samsung",
+   "sold": 16136,
+   "bh": 300,
+   "frtX": 48,
+   "brandX": 0,
+   "acc": 7,
+   "early": 55,
+   "earlyKnown": 228
+  },
+  {
+   "m": "M03.26",
+   "g": "Smartwatch",
+   "sold": 8777,
+   "bh": 198,
+   "frtX": 20,
+   "brandX": 72,
+   "acc": 20,
+   "early": 48,
+   "earlyKnown": 190
+  },
+  {
+   "m": "M03.26",
+   "g": "MTB",
+   "sold": 3278,
+   "bh": 57,
+   "frtX": 7,
+   "brandX": 6,
+   "acc": 9,
+   "early": 10,
+   "earlyKnown": 42
+  },
+  {
+   "m": "M03.26",
+   "g": "Máy In",
+   "sold": 895,
+   "bh": 5,
+   "frtX": 0,
+   "brandX": 1,
+   "acc": 1,
+   "early": 0,
+   "earlyKnown": 5
+  },
+  {
+   "m": "M04.26",
+   "g": "MT",
+   "sold": 16391,
+   "bh": 886,
+   "frtX": 70,
+   "brandX": 30,
+   "acc": 41,
+   "early": 78,
+   "earlyKnown": 862
+  },
+  {
+   "m": "M04.26",
+   "g": "Apple",
+   "sold": 46796,
+   "bh": 276,
+   "frtX": 45,
+   "brandX": 29,
+   "acc": 35,
+   "early": 55,
+   "earlyKnown": 224
+  },
+  {
+   "m": "M04.26",
+   "g": "ĐTDĐ",
+   "sold": 35587,
+   "bh": 378,
+   "frtX": 65,
+   "brandX": 33,
+   "acc": 26,
+   "early": 84,
+   "earlyKnown": 277
+  },
+  {
+   "m": "M04.26",
+   "g": "Samsung",
+   "sold": 17445,
+   "bh": 213,
+   "frtX": 40,
+   "brandX": 0,
+   "acc": 5,
+   "early": 43,
+   "earlyKnown": 185
+  },
+  {
+   "m": "M04.26",
+   "g": "Smartwatch",
+   "sold": 6986,
+   "bh": 164,
+   "frtX": 13,
+   "brandX": 44,
+   "acc": 11,
+   "early": 25,
+   "earlyKnown": 161
+  },
+  {
+   "m": "M04.26",
+   "g": "MTB",
+   "sold": 2869,
+   "bh": 47,
+   "frtX": 5,
+   "brandX": 2,
+   "acc": 3,
+   "early": 8,
+   "earlyKnown": 35
+  },
+  {
+   "m": "M04.26",
+   "g": "Máy In",
+   "sold": 826,
+   "bh": 5,
+   "frtX": 1,
+   "brandX": 0,
+   "acc": 0,
+   "early": 1,
+   "earlyKnown": 5
+  },
+  {
+   "m": "M05.26",
+   "g": "MT",
+   "sold": 15844,
+   "bh": 997,
+   "frtX": 68,
+   "brandX": 25,
+   "acc": 50,
+   "early": 71,
+   "earlyKnown": 974
+  },
+  {
+   "m": "M05.26",
+   "g": "Apple",
+   "sold": 40725,
+   "bh": 223,
+   "frtX": 35,
+   "brandX": 19,
+   "acc": 39,
+   "early": 59,
+   "earlyKnown": 213
+  },
+  {
+   "m": "M05.26",
+   "g": "ĐTDĐ",
+   "sold": 38847,
+   "bh": 357,
+   "frtX": 64,
+   "brandX": 35,
+   "acc": 28,
+   "early": 83,
+   "earlyKnown": 314
+  },
+  {
+   "m": "M05.26",
+   "g": "Samsung",
+   "sold": 31912,
+   "bh": 247,
+   "frtX": 42,
+   "brandX": 0,
+   "acc": 5,
+   "early": 54,
+   "earlyKnown": 168
+  },
+  {
+   "m": "M05.26",
+   "g": "Smartwatch",
+   "sold": 9180,
+   "bh": 186,
+   "frtX": 14,
+   "brandX": 44,
+   "acc": 8,
+   "early": 30,
+   "earlyKnown": 185
+  },
+  {
+   "m": "M05.26",
+   "g": "MTB",
+   "sold": 3137,
+   "bh": 52,
+   "frtX": 5,
+   "brandX": 4,
+   "acc": 7,
+   "early": 7,
+   "earlyKnown": 45
+  },
+  {
+   "m": "M05.26",
+   "g": "Máy In",
+   "sold": 840,
+   "bh": 5,
+   "frtX": 0,
+   "brandX": 0,
+   "acc": 1,
+   "early": 0,
+   "earlyKnown": 5
+  },
+  {
+   "m": "M06.26",
+   "g": "MT",
+   "sold": 16489,
+   "bh": 1055,
+   "frtX": 70,
+   "brandX": 35,
+   "acc": 36,
+   "early": 73,
+   "earlyKnown": 1031
+  },
+  {
+   "m": "M06.26",
+   "g": "Apple",
+   "sold": 45058,
+   "bh": 259,
+   "frtX": 39,
+   "brandX": 26,
+   "acc": 45,
+   "early": 47,
+   "earlyKnown": 237
+  },
+  {
+   "m": "M06.26",
+   "g": "ĐTDĐ",
+   "sold": 38379,
+   "bh": 410,
+   "frtX": 93,
+   "brandX": 40,
+   "acc": 29,
+   "early": 95,
+   "earlyKnown": 335
+  },
+  {
+   "m": "M06.26",
+   "g": "Samsung",
+   "sold": 37377,
+   "bh": 859,
+   "frtX": 38,
+   "brandX": 0,
+   "acc": 3,
+   "early": 42,
+   "earlyKnown": 162
+  },
+  {
+   "m": "M06.26",
+   "g": "Smartwatch",
+   "sold": 8958,
+   "bh": 166,
+   "frtX": 17,
+   "brandX": 49,
+   "acc": 10,
+   "early": 34,
+   "earlyKnown": 161
+  },
+  {
+   "m": "M06.26",
+   "g": "MTB",
+   "sold": 3512,
+   "bh": 68,
+   "frtX": 10,
+   "brandX": 9,
+   "acc": 9,
+   "early": 16,
+   "earlyKnown": 59
+  },
+  {
+   "m": "M06.26",
+   "g": "Máy In",
+   "sold": 899,
+   "bh": 5,
+   "frtX": 1,
+   "brandX": 0,
+   "acc": 0,
+   "early": 1,
+   "earlyKnown": 4
+  },
+  {
+   "m": "M07.26",
+   "g": "MT",
+   "sold": 20945,
+   "bh": 1120,
+   "frtX": 78,
+   "brandX": 28,
+   "acc": 35,
+   "early": 77,
+   "earlyKnown": 986
+  },
+  {
+   "m": "M07.26",
+   "g": "Apple",
+   "sold": 40419,
+   "bh": 198,
+   "frtX": 30,
+   "brandX": 31,
+   "acc": 27,
+   "early": 29,
+   "earlyKnown": 156
+  },
+  {
+   "m": "M07.26",
+   "g": "ĐTDĐ",
+   "sold": 40844,
+   "bh": 540,
+   "frtX": 85,
+   "brandX": 53,
+   "acc": 29,
+   "early": 85,
+   "earlyKnown": 312
+  },
+  {
+   "m": "M07.26",
+   "g": "Samsung",
+   "sold": 40543,
+   "bh": 1166,
+   "frtX": 45,
+   "brandX": 0,
+   "acc": 8,
+   "early": 47,
+   "earlyKnown": 148
+  },
+  {
+   "m": "M07.26",
+   "g": "Smartwatch",
+   "sold": 9441,
+   "bh": 184,
+   "frtX": 19,
+   "brandX": 59,
+   "acc": 8,
+   "early": 33,
+   "earlyKnown": 161
+  },
+  {
+   "m": "M07.26",
+   "g": "MTB",
+   "sold": 5566,
+   "bh": 41,
+   "frtX": 4,
+   "brandX": 3,
+   "acc": 4,
+   "early": 8,
+   "earlyKnown": 28
+  },
+  {
+   "m": "M07.26",
+   "g": "Máy In",
+   "sold": 1196,
+   "bh": 10,
+   "frtX": 0,
+   "brandX": 1,
+   "acc": 0,
+   "early": 1,
+   "earlyKnown": 10
+  },
+  {
+   "m": "M08.26",
+   "g": "MT",
+   "sold": 31992,
+   "bh": 1127,
+   "frtX": 78,
+   "brandX": 35,
+   "acc": 61,
+   "early": 74,
+   "earlyKnown": 865
+  },
+  {
+   "m": "M08.26",
+   "g": "Apple",
+   "sold": 47136,
+   "bh": 249,
+   "frtX": 49,
+   "brandX": 31,
+   "acc": 41,
+   "early": 40,
+   "earlyKnown": 179
+  },
+  {
+   "m": "M08.26",
+   "g": "ĐTDĐ",
+   "sold": 49469,
+   "bh": 442,
+   "frtX": 93,
+   "brandX": 36,
+   "acc": 23,
+   "early": 71,
+   "earlyKnown": 226
+  },
+  {
+   "m": "M08.26",
+   "g": "Samsung",
+   "sold": 20866,
+   "bh": 238,
+   "frtX": 49,
+   "brandX": 0,
+   "acc": 5,
+   "early": 44,
+   "earlyKnown": 118
+  },
+  {
+   "m": "M08.26",
+   "g": "Smartwatch",
+   "sold": 11849,
+   "bh": 182,
+   "frtX": 39,
+   "brandX": 49,
+   "acc": 13,
+   "early": 41,
+   "earlyKnown": 120
+  },
+  {
+   "m": "M08.26",
+   "g": "MTB",
+   "sold": 2991,
+   "bh": 50,
+   "frtX": 6,
+   "brandX": 5,
+   "acc": 7,
+   "early": 8,
+   "earlyKnown": 33
+  },
+  {
+   "m": "M08.26",
+   "g": "Máy In",
+   "sold": 1038,
+   "bh": 9,
+   "frtX": 0,
+   "brandX": 1,
+   "acc": 0,
+   "early": 1,
+   "earlyKnown": 7
+  },
+  {
+   "m": "M09.26",
+   "g": "MT",
+   "sold": 30440,
+   "bh": 1117,
+   "frtX": 98,
+   "brandX": 37,
+   "acc": 63,
+   "early": 74,
+   "earlyKnown": 682
+  },
+  {
+   "m": "M09.26",
+   "g": "Apple",
+   "sold": 51568,
+   "bh": 241,
+   "frtX": 45,
+   "brandX": 21,
+   "acc": 32,
+   "early": 31,
+   "earlyKnown": 127
+  },
+  {
+   "m": "M09.26",
+   "g": "ĐTDĐ",
+   "sold": 45907,
+   "bh": 467,
+   "frtX": 124,
+   "brandX": 48,
+   "acc": 34,
+   "early": 57,
+   "earlyKnown": 208
+  },
+  {
+   "m": "M09.26",
+   "g": "Samsung",
+   "sold": 18815,
+   "bh": 148,
+   "frtX": 35,
+   "brandX": 0,
+   "acc": 6,
+   "early": 22,
+   "earlyKnown": 64
+  },
+  {
+   "m": "M09.26",
+   "g": "Smartwatch",
+   "sold": 13472,
+   "bh": 293,
+   "frtX": 57,
+   "brandX": 64,
+   "acc": 20,
+   "early": 41,
+   "earlyKnown": 158
+  },
+  {
+   "m": "M09.26",
+   "g": "MTB",
+   "sold": 2755,
+   "bh": 55,
+   "frtX": 7,
+   "brandX": 3,
+   "acc": 8,
+   "early": 5,
+   "earlyKnown": 24
+  },
+  {
+   "m": "M09.26",
+   "g": "Máy In",
+   "sold": 1586,
+   "bh": 10,
+   "frtX": 0,
+   "brandX": 1,
+   "acc": 0,
+   "early": 1,
+   "earlyKnown": 7
+  }
+ ],
+ "brand_groups": {
+  "AC": [
+   "ĐTDĐ"
+  ],
+  "AOC": [
+   "MT"
+  ],
+  "Acer": [
+   "MT",
+   "ĐTDĐ"
+  ],
+  "Amazfit": [
+   "Smartwatch"
+  ],
+  "Anker": [
+   "MT"
+  ],
+  "Apple": [
+   "Apple"
+  ],
+  "Asus": [
+   "MT",
+   "ĐTDĐ"
+  ],
+  "Avita": [
+   "MT"
+  ],
+  "Beecube": [
+   "MT"
+  ],
+  "Benco": [
+   "ĐTDĐ"
+  ],
+  "Brother": [
+   "Máy In"
+  ],
+  "Canon": [
+   "MT",
+   "Máy In"
+  ],
+  "Casper": [
+   "MT"
+  ],
+  "Chuwi": [
+   "MT"
+  ],
+  "Colorful": [
+   "MT"
+  ],
+  "Coolpad": [
+   "MTB"
+  ],
+  "Coros": [
+   "Smartwatch"
+  ],
+  "Dell": [
+   "MT"
+  ],
+  "E-KIDS": [
+   "Smartwatch"
+  ],
+  "E-Power": [
+   "MT"
+  ],
+  "EDRA": [
+   "MT"
+  ],
+  "ELEAD": [
+   "MT"
+  ],
+  "Epson": [
+   "Máy In"
+  ],
+  "Eroc": [
+   "MT"
+  ],
+  "Evolis": [
+   "Máy In"
+  ],
+  "FPT": [
+   "MT"
+  ],
+  "FPT Elead": [
+   "MT"
+  ],
+  "Fujifilm": [
+   "Máy In"
+  ],
+  "Garmin": [
+   "Smartwatch"
+  ],
+  "Gigabyte": [
+   "MT"
+  ],
+  "Goly": [
+   "Smartwatch"
+  ],
+  "HP": [
+   "MT",
+   "Máy In"
+  ],
+  "HPE": [
+   "Máy In"
+  ],
+  "Hafele": [
+   "MT"
+  ],
+  "Hanin": [
+   "Máy In"
+  ],
+  "Hikvision": [
+   "MT"
+  ],
+  "Honor": [
+   "ĐTDĐ",
+   "Smartwatch",
+   "MTB"
+  ],
+  "Huawei": [
+   "MT",
+   "Smartwatch",
+   "MTB"
+  ],
+  "Hòa Phát": [
+   "MT"
+  ],
+  "Inoi": [
+   "ĐTDĐ"
+  ],
+  "Intel": [
+   "Apple"
+  ],
+  "Itel": [
+   "ĐTDĐ"
+  ],
+  "JoyStar": [
+   "Smartwatch",
+   "MTB"
+  ],
+  "KidPlus": [
+   "Smartwatch"
+  ],
+  "Kieslect": [
+   "Smartwatch"
+  ],
+  "Kingmax": [
+   "MT"
+  ],
+  "Kingston": [
+   "MT"
+  ],
+  "Kospet": [
+   "Smartwatch"
+  ],
+  "LG": [
+   "MT"
+  ],
+  "Lenovo": [
+   "MT",
+   "MTB",
+   "Máy In"
+  ],
+  "Lumias": [
+   "MTB"
+  ],
+  "MOBIISTAR": [
+   "ĐTDĐ"
+  ],
+  "MSI": [
+   "MT",
+   "ĐTDĐ"
+  ],
+  "Masstel": [
+   "MT",
+   "ĐTDĐ",
+   "Smartwatch",
+   "MTB"
+  ],
+  "Meizu": [
+   "ĐTDĐ"
+  ],
+  "Mibro": [
+   "Smartwatch"
+  ],
+  "Microsoft": [
+   "MT"
+  ],
+  "Mobell": [
+   "ĐTDĐ"
+  ],
+  "Myfirst": [
+   "Smartwatch"
+  ],
+  "Myfirst Fone": [
+   "Smartwatch"
+  ],
+  "Nokia": [
+   "ĐTDĐ"
+  ],
+  "Nubia": [
+   "ĐTDĐ"
+  ],
+  "Oppo": [
+   "ĐTDĐ",
+   "Smartwatch",
+   "MTB"
+  ],
+  "Pantum": [
+   "Máy In"
+  ],
+  "Philips": [
+   "MT"
+  ],
+  "Pramie": [
+   "ĐTDĐ"
+  ],
+  "Q-mobile": [
+   "ĐTDĐ"
+  ],
+  "QUADRO": [
+   "MT"
+  ],
+  "Realme": [
+   "ĐTDĐ"
+  ],
+  "RedMagic": [
+   "ĐTDĐ",
+   "MTB"
+  ],
+  "Samsung": [
+   "MT",
+   "Samsung"
+  ],
+  "SingPC": [
+   "MT"
+  ],
+  "Sony": [
+   "MT",
+   "ĐTDĐ"
+  ],
+  "Sunhouse": [
+   "MT"
+  ],
+  "Suunto": [
+   "Smartwatch"
+  ],
+  "TCL": [
+   "ĐTDĐ",
+   "MTB"
+  ],
+  "Tecno": [
+   "ĐTDĐ"
+  ],
+  "VAIO": [
+   "MT"
+  ],
+  "VIEWSONIC": [
+   "MT"
+  ],
+  "VSP": [
+   "MT"
+  ],
+  "Viettel": [
+   "ĐTDĐ"
+  ],
+  "Viewsonic": [
+   "MT"
+  ],
+  "Vivo": [
+   "ĐTDĐ"
+  ],
+  "Vsmart": [
+   "ĐTDĐ"
+  ],
+  "WD": [
+   "MT"
+  ],
+  "Wanbo": [
+   "MT"
+  ],
+  "XIGMATEK": [
+   "MT"
+  ],
+  "Xiaomi": [
+   "MT",
+   "ĐTDĐ",
+   "Smartwatch",
+   "MTB"
+  ],
+  "Xprinter": [
+   "Máy In"
+  ],
+  "Yaber": [
+   "MT"
+  ],
+  "ZTE": [
+   "ĐTDĐ"
+  ],
+  "ZTE Blade": [
+   "ĐTDĐ"
+  ],
+  "Zebra": [
+   "Máy In"
+  ],
+  "Zobo": [
+   "Smartwatch"
+  ],
+  "Zwatch": [
+   "Smartwatch"
+  ],
+  "iDPRT": [
+   "Máy In"
+  ],
+  "myALO": [
+   "Smartwatch"
+  ]
+ },
+ "brand_month": {
+  "M10.25": [
+   [
+    "AC",
+    1,
+    0
+   ],
+   [
+    "AMD",
+    2,
+    0
+   ],
+   [
+    "Acer",
+    2724,
+    239
+   ],
+   [
+    "Amazfit",
+    204,
+    7
+   ],
+   [
+    "Apple",
+    62865,
+    458
+   ],
+   [
+    "Asus",
+    5997,
+    437
+   ],
+   [
+    "Beecube",
+    0,
+    3
+   ],
+   [
+    "Benco",
+    106,
+    5
+   ],
+   [
+    "Bronze",
+    2,
+    0
+   ],
+   [
+    "Brother",
+    93,
+    1
+   ],
+   [
+    "Canon",
+    759,
+    2
+   ],
+   [
+    "Casper",
+    1,
+    0
+   ],
+   [
+    "Colorful",
+    301,
+    2
+   ],
+   [
+    "Dell",
+    2749,
+    68
+   ],
+   [
+    "E-Power",
+    1213,
+    0
+   ],
+   [
+    "EDRA",
+    253,
+    3
+   ],
+   [
+    "ELEAD",
+    27,
+    0
+   ],
+   [
+    "FPT",
+    162,
+    0
+   ],
+   [
+    "Fujifilm",
+    2,
+    0
+   ],
+   [
+    "Garmin",
+    2390,
+    7
+   ],
+   [
+    "Gigabyte",
+    167,
+    38
+   ],
+   [
+    "Goly",
+    34,
+    10
+   ],
+   [
+    "HP",
+    3830,
+    166
+   ],
+   [
+    "HPE",
+    1,
+    0
+   ],
+   [
+    "Hafele",
+    3,
+    0
+   ],
+   [
+    "Honor",
+    11087,
+    279
+   ],
+   [
+    "Hotwell",
+    1,
+    0
+   ],
+   [
+    "Huawei",
+    1411,
+    31
+   ],
+   [
+    "Hòa Phát",
+    2,
+    0
+   ],
+   [
+    "Inoi",
+    186,
+    17
+   ],
+   [
+    "Intel",
+    1,
+    0
+   ],
+   [
+    "Itel",
+    54,
+    4
+   ],
+   [
+    "JBL",
+    1,
+    0
+   ],
+   [
+    "JoyStar",
+    197,
+    6
+   ],
+   [
+    "Kangaroo",
+    22,
+    0
+   ],
+   [
+    "Karofi",
+    2,
+    0
+   ],
+   [
+    "Khác",
+    22,
+    0
+   ],
+   [
+    "Kieslect",
+    46,
+    4
+   ],
+   [
+    "Kingmax",
+    36,
+    0
+   ],
+   [
+    "Kingston",
+    0,
+    1
+   ],
+   [
+    "Kospet",
+    82,
+    11
+   ],
+   [
+    "LG",
+    672,
+    4
+   ],
+   [
+    "Lenovo",
+    4598,
+    296
+   ],
+   [
+    "Lumias",
+    1,
+    0
+   ],
+   [
+    "MSI",
+    1270,
+    57
+   ],
+   [
+    "Masstel",
+    6642,
+    170
+   ],
+   [
+    "Mibro",
+    0,
+    3
+   ],
+   [
+    "Microsoft",
+    0,
+    1
+   ],
+   [
+    "Mobell",
+    100,
+    5
+   ],
+   [
+    "Myfirst",
+    52,
+    0
+   ],
+   [
+    "Myfirst Fone",
+    0,
+    8
+   ],
+   [
+    "Nokia",
+    2658,
+    57
+   ],
+   [
+    "Nubia",
+    3402,
+    52
+   ],
+   [
+    "Oppo",
+    7757,
+    289
+   ],
+   [
+    "QUADRO",
+    0,
+    38
+   ],
+   [
+    "Realme",
+    77,
+    10
+   ],
+   [
+    "RedMagic",
+    566,
+    4
+   ],
+   [
+    "Samsung",
+    19070,
+    499
+   ],
+   [
+    "Seagate",
+    30,
+    0
+   ],
+   [
+    "Silicon",
+    7,
+    0
+   ],
+   [
+    "SingPC",
+    6,
+    0
+   ],
+   [
+    "Sunhouse",
+    4,
+    0
+   ],
+   [
+    "TCL",
+    262,
+    15
+   ],
+   [
+    "Teamgroup",
+    5,
+    0
+   ],
+   [
+    "Tecno",
+    1686,
+    11
+   ],
+   [
+    "Toshiba",
+    6,
+    0
+   ],
+   [
+    "Transcend",
+    1,
+    0
+   ],
+   [
+    "VAIO",
+    0,
+    1
+   ],
+   [
+    "VIEWSONIC",
+    0,
+    5
+   ],
+   [
+    "VSP",
+    64,
+    1
+   ],
+   [
+    "Viettel",
+    513,
+    40
+   ],
+   [
+    "Viewsonic",
+    201,
+    0
+   ],
+   [
+    "Vivo",
+    28,
+    1
+   ],
+   [
+    "XIGMATEK",
+    0,
+    1
+   ],
+   [
+    "Xiaomi",
+    14553,
+    134
+   ],
+   [
+    "Xprinter",
+    9,
+    1
+   ],
+   [
+    "ZTE",
+    131,
+    0
+   ],
+   [
+    "ZTE Blade",
+    0,
+    1
+   ],
+   [
+    "Zebra",
+    5,
+    0
+   ],
+   [
+    "Zwatch",
+    66,
+    8
+   ]
+  ],
+  "M11.25": [
+   [
+    "AIGO",
+    1,
+    0
+   ],
+   [
+    "AOC",
+    1,
+    1
+   ],
+   [
+    "Acer",
+    2169,
+    190
+   ],
+   [
+    "Amazfit",
+    334,
+    6
+   ],
+   [
+    "Apple",
+    57940,
+    314
+   ],
+   [
+    "Asus",
+    3925,
+    393
+   ],
+   [
+    "Benco",
+    132,
+    4
+   ],
+   [
+    "Brother",
+    82,
+    1
+   ],
+   [
+    "Canon",
+    626,
+    4
+   ],
+   [
+    "Casper",
+    11,
+    0
+   ],
+   [
+    "Colorful",
+    289,
+    3
+   ],
+   [
+    "Coolpad",
+    1,
+    1
+   ],
+   [
+    "Crucial",
+    2,
+    0
+   ],
+   [
+    "Dato",
+    6,
+    0
+   ],
+   [
+    "Dell",
+    1504,
+    65
+   ],
+   [
+    "E-Power",
+    1364,
+    0
+   ],
+   [
+    "EDRA",
+    356,
+    3
+   ],
+   [
+    "Epson",
+    2,
+    0
+   ],
+   [
+    "FPT Elead",
+    60,
+    0
+   ],
+   [
+    "Garmin",
+    2943,
+    9
+   ],
+   [
+    "Gigabyte",
+    107,
+    30
+   ],
+   [
+    "Goly",
+    20,
+    5
+   ],
+   [
+    "HP",
+    2691,
+    112
+   ],
+   [
+    "Hafele",
+    2,
+    0
+   ],
+   [
+    "Hisense",
+    10,
+    0
+   ],
+   [
+    "Honor",
+    10478,
+    148
+   ],
+   [
+    "Huawei",
+    1341,
+    34
+   ],
+   [
+    "IDCooling",
+    1,
+    0
+   ],
+   [
+    "Inoi",
+    128,
+    11
+   ],
+   [
+    "Intel",
+    1,
+    0
+   ],
+   [
+    "Itel",
+    28,
+    2
+   ],
+   [
+    "JBL",
+    1,
+    0
+   ],
+   [
+    "JoyStar",
+    75,
+    12
+   ],
+   [
+    "Kangaroo",
+    8,
+    0
+   ],
+   [
+    "Karofi",
+    1,
+    0
+   ],
+   [
+    "Kenoo",
+    1,
+    0
+   ],
+   [
+    "Kieslect",
+    40,
+    6
+   ],
+   [
+    "Kingmax",
+    8,
+    0
+   ],
+   [
+    "Kingston",
+    21,
+    1
+   ],
+   [
+    "Kospet",
+    48,
+    7
+   ],
+   [
+    "LG",
+    703,
+    3
+   ],
+   [
+    "Lenovo",
+    3791,
+    283
+   ],
+   [
+    "MSI",
+    1255,
+    62
+   ],
+   [
+    "Masstel",
+    2734,
+    162
+   ],
+   [
+    "Mibro",
+    0,
+    1
+   ],
+   [
+    "Microsoft",
+    2,
+    0
+   ],
+   [
+    "Mobell",
+    70,
+    0
+   ],
+   [
+    "Myfirst",
+    34,
+    0
+   ],
+   [
+    "Myfirst Fone",
+    0,
+    4
+   ],
+   [
+    "Nokia",
+    2834,
+    62
+   ],
+   [
+    "Nubia",
+    2856,
+    45
+   ],
+   [
+    "Oppo",
+    7652,
+    39
+   ],
+   [
+    "QUADRO",
+    0,
+    30
+   ],
+   [
+    "Realme",
+    58,
+    5
+   ],
+   [
+    "RedMagic",
+    848,
+    6
+   ],
+   [
+    "Samsung",
+    16480,
+    463
+   ],
+   [
+    "Sunhouse",
+    1,
+    0
+   ],
+   [
+    "Synology",
+    18,
+    0
+   ],
+   [
+    "TCL",
+    495,
+    5
+   ],
+   [
+    "Tecno",
+    1012,
+    10
+   ],
+   [
+    "Toshiba",
+    1,
+    0
+   ],
+   [
+    "VIEWSONIC",
+    0,
+    8
+   ],
+   [
+    "VSP",
+    193,
+    4
+   ],
+   [
+    "Viettel",
+    377,
+    34
+   ],
+   [
+    "Viewsonic",
+    229,
+    0
+   ],
+   [
+    "Vivo",
+    22,
+    0
+   ],
+   [
+    "WD",
+    10,
+    0
+   ],
+   [
+    "Xiaomi",
+    9475,
+    112
+   ],
+   [
+    "Xprinter",
+    5,
+    0
+   ],
+   [
+    "ZTE",
+    94,
+    0
+   ],
+   [
+    "ZTE Blade",
+    0,
+    1
+   ],
+   [
+    "Zwatch",
+    52,
+    5
+   ]
+  ],
+  "M12.25": [
+   [
+    "AC",
+    1,
+    0
+   ],
+   [
+    "APC",
+    40,
+    0
+   ],
+   [
+    "Acer",
+    2021,
+    161
+   ],
+   [
+    "Amazfit",
+    402,
+    6
+   ],
+   [
+    "Apple",
+    63927,
+    330
+   ],
+   [
+    "Asus",
+    3145,
+    356
+   ],
+   [
+    "Avita",
+    4,
+    0
+   ],
+   [
+    "Beecube",
+    0,
+    1
+   ],
+   [
+    "Benco",
+    266,
+    3
+   ],
+   [
+    "Brother",
+    119,
+    2
+   ],
+   [
+    "Canon",
+    749,
+    2
+   ],
+   [
+    "Casper",
+    6,
+    0
+   ],
+   [
+    "Chuwi",
+    44,
+    0
+   ],
+   [
+    "Colorful",
+    270,
+    3
+   ],
+   [
+    "Coolpad",
+    19,
+    0
+   ],
+   [
+    "Crucial",
+    2,
+    0
+   ],
+   [
+    "Dalite",
+    1,
+    0
+   ],
+   [
+    "Dell",
+    1891,
+    37
+   ],
+   [
+    "E-Power",
+    1753,
+    0
+   ],
+   [
+    "EDRA",
+    332,
+    1
+   ],
+   [
+    "Epson",
+    4,
+    0
+   ],
+   [
+    "Garmin",
+    2705,
+    9
+   ],
+   [
+    "Gigabyte",
+    72,
+    15
+   ],
+   [
+    "Goly",
+    20,
+    6
+   ],
+   [
+    "HP",
+    2827,
+    85
+   ],
+   [
+    "Hafele",
+    2,
+    0
+   ],
+   [
+    "Hisense",
+    7,
+    0
+   ],
+   [
+    "Honor",
+    15502,
+    211
+   ],
+   [
+    "Huawei",
+    1426,
+    22
+   ],
+   [
+    "Inoi",
+    96,
+    11
+   ],
+   [
+    "Intel",
+    2,
+    0
+   ],
+   [
+    "Itel",
+    23,
+    2
+   ],
+   [
+    "JBL",
+    1,
+    0
+   ],
+   [
+    "JoyStar",
+    72,
+    8
+   ],
+   [
+    "Kangaroo",
+    1,
+    0
+   ],
+   [
+    "Karofi",
+    1,
+    0
+   ],
+   [
+    "Khác",
+    3,
+    0
+   ],
+   [
+    "Kieslect",
+    23,
+    1
+   ],
+   [
+    "Kingmax",
+    31,
+    0
+   ],
+   [
+    "Kingston",
+    1,
+    0
+   ],
+   [
+    "Kospet",
+    58,
+    6
+   ],
+   [
+    "LG",
+    971,
+    1
+   ],
+   [
+    "Lenovo",
+    3979,
+    288
+   ],
+   [
+    "Lexar",
+    40,
+    0
+   ],
+   [
+    "Logitech",
+    13,
+    0
+   ],
+   [
+    "MSI",
+    1403,
+    49
+   ],
+   [
+    "Masstel",
+    3476,
+    157
+   ],
+   [
+    "Microsoft",
+    6,
+    0
+   ],
+   [
+    "Mobell",
+    37,
+    1
+   ],
+   [
+    "Myfirst",
+    53,
+    0
+   ],
+   [
+    "Myfirst Fone",
+    0,
+    3
+   ],
+   [
+    "Nokia",
+    2208,
+    64
+   ],
+   [
+    "Nubia",
+    2692,
+    23
+   ],
+   [
+    "Oppo",
+    15303,
+    36
+   ],
+   [
+    "Pantum",
+    1,
+    0
+   ],
+   [
+    "Q-mobile",
+    0,
+    1
+   ],
+   [
+    "QUADRO",
+    0,
+    15
+   ],
+   [
+    "Realme",
+    64,
+    1
+   ],
+   [
+    "RedMagic",
+    1427,
+    6
+   ],
+   [
+    "Samsung",
+    17955,
+    939
+   ],
+   [
+    "SanDisk",
+    44,
+    0
+   ],
+   [
+    "TCL",
+    237,
+    9
+   ],
+   [
+    "Tecno",
+    887,
+    7
+   ],
+   [
+    "Toshiba",
+    1,
+    0
+   ],
+   [
+    "Transcend",
+    2,
+    0
+   ],
+   [
+    "UniFi",
+    2,
+    0
+   ],
+   [
+    "VAIO",
+    0,
+    2
+   ],
+   [
+    "VIEWSONIC",
+    0,
+    5
+   ],
+   [
+    "VSP",
+    207,
+    2
+   ],
+   [
+    "Viettel",
+    160,
+    14
+   ],
+   [
+    "Viewsonic",
+    272,
+    0
+   ],
+   [
+    "Vivo",
+    19,
+    0
+   ],
+   [
+    "Xiaomi",
+    10347,
+    137
+   ],
+   [
+    "Xprinter",
+    15,
+    0
+   ],
+   [
+    "ZTE",
+    53,
+    0
+   ],
+   [
+    "ZTE Blade",
+    0,
+    1
+   ],
+   [
+    "Zwatch",
+    47,
+    9
+   ]
+  ],
+  "M01.26": [
+   [
+    "Acer",
+    1829,
+    172
+   ],
+   [
+    "Amazfit",
+    736,
+    8
+   ],
+   [
+    "Apple",
+    58738,
+    290
+   ],
+   [
+    "Aruba",
+    3,
+    0
+   ],
+   [
+    "Asus",
+    2873,
+    323
+   ],
+   [
+    "Benco",
+    47,
+    0
+   ],
+   [
+    "Brother",
+    94,
+    3
+   ],
+   [
+    "Canon",
+    668,
+    1
+   ],
+   [
+    "Casper",
+    8,
+    0
+   ],
+   [
+    "Colorful",
+    571,
+    9
+   ],
+   [
+    "Crucial",
+    1,
+    0
+   ],
+   [
+    "DJI",
+    2,
+    0
+   ],
+   [
+    "Dell",
+    1584,
+    42
+   ],
+   [
+    "E-Power",
+    1308,
+    0
+   ],
+   [
+    "EDRA",
+    313,
+    3
+   ],
+   [
+    "ELEAD",
+    3,
+    0
+   ],
+   [
+    "Epson",
+    2,
+    0
+   ],
+   [
+    "FPT",
+    22,
+    0
+   ],
+   [
+    "Garmin",
+    3299,
+    6
+   ],
+   [
+    "Gigabyte",
+    131,
+    28
+   ],
+   [
+    "Goly",
+    21,
+    3
+   ],
+   [
+    "HP",
+    2633,
+    72
+   ],
+   [
+    "Hafele",
+    2,
+    0
+   ],
+   [
+    "Hisense",
+    8,
+    0
+   ],
+   [
+    "Honor",
+    9665,
+    105
+   ],
+   [
+    "Huawei",
+    1725,
+    20
+   ],
+   [
+    "Inoi",
+    69,
+    13
+   ],
+   [
+    "Intel",
+    1,
+    0
+   ],
+   [
+    "Itel",
+    12,
+    0
+   ],
+   [
+    "Jabra",
+    1,
+    0
+   ],
+   [
+    "JoyStar",
+    68,
+    9
+   ],
+   [
+    "Kangaroo",
+    1,
+    0
+   ],
+   [
+    "Karofi",
+    2,
+    0
+   ],
+   [
+    "Kieslect",
+    14,
+    5
+   ],
+   [
+    "Kingston",
+    0,
+    2
+   ],
+   [
+    "Kospet",
+    62,
+    8
+   ],
+   [
+    "LG",
+    750,
+    2
+   ],
+   [
+    "Lenovo",
+    3742,
+    258
+   ],
+   [
+    "MSI",
+    1041,
+    41
+   ],
+   [
+    "Masstel",
+    4083,
+    141
+   ],
+   [
+    "Mobell",
+    45,
+    4
+   ],
+   [
+    "Myfirst",
+    33,
+    0
+   ],
+   [
+    "Myfirst Fone",
+    0,
+    9
+   ],
+   [
+    "Nokia",
+    2330,
+    37
+   ],
+   [
+    "Nubia",
+    2944,
+    35
+   ],
+   [
+    "Oppo",
+    7727,
+    52
+   ],
+   [
+    "Pramie",
+    6,
+    0
+   ],
+   [
+    "QUADRO",
+    0,
+    28
+   ],
+   [
+    "Realme",
+    40,
+    0
+   ],
+   [
+    "RedMagic",
+    1033,
+    8
+   ],
+   [
+    "Samsung",
+    17931,
+    234
+   ],
+   [
+    "Seagate",
+    2,
+    0
+   ],
+   [
+    "Sharp",
+    1,
+    0
+   ],
+   [
+    "Silicon",
+    1,
+    0
+   ],
+   [
+    "TCL",
+    187,
+    4
+   ],
+   [
+    "Tecno",
+    608,
+    9
+   ],
+   [
+    "Toshiba",
+    2,
+    0
+   ],
+   [
+    "Transcend",
+    2,
+    0
+   ],
+   [
+    "Ugreen",
+    3,
+    0
+   ],
+   [
+    "VAIO",
+    0,
+    1
+   ],
+   [
+    "VIEWSONIC",
+    0,
+    3
+   ],
+   [
+    "VSP",
+    195,
+    0
+   ],
+   [
+    "Viettel",
+    164,
+    16
+   ],
+   [
+    "Viewsonic",
+    216,
+    0
+   ],
+   [
+    "Vivo",
+    10,
+    0
+   ],
+   [
+    "Wanbo",
+    0,
+    1
+   ],
+   [
+    "Xiaomi",
+    16065,
+    120
+   ],
+   [
+    "Xprinter",
+    12,
+    0
+   ],
+   [
+    "ZTE",
+    42,
+    0
+   ],
+   [
+    "ZTE Blade",
+    0,
+    3
+   ],
+   [
+    "Zwatch",
+    89,
+    11
+   ],
+   [
+    "iData",
+    58,
+    0
+   ]
+  ],
+  "M02.26": [
+   [
+    "APC",
+    32,
+    0
+   ],
+   [
+    "Acer",
+    1496,
+    98
+   ],
+   [
+    "Amazfit",
+    441,
+    4
+   ],
+   [
+    "Apple",
+    47772,
+    199
+   ],
+   [
+    "Asus",
+    3001,
+    189
+   ],
+   [
+    "Benco",
+    37,
+    2
+   ],
+   [
+    "Brother",
+    53,
+    0
+   ],
+   [
+    "Canon",
+    329,
+    1
+   ],
+   [
+    "Casper",
+    13,
+    0
+   ],
+   [
+    "Colorful",
+    395,
+    3
+   ],
+   [
+    "Dell",
+    1420,
+    21
+   ],
+   [
+    "E-Power",
+    1044,
+    0
+   ],
+   [
+    "EDRA",
+    147,
+    0
+   ],
+   [
+    "ELEAD",
+    2,
+    0
+   ],
+   [
+    "Ecovacs",
+    1,
+    0
+   ],
+   [
+    "FPT",
+    1,
+    0
+   ],
+   [
+    "Garmin",
+    2226,
+    5
+   ],
+   [
+    "Gigabyte",
+    186,
+    22
+   ],
+   [
+    "Goly",
+    12,
+    1
+   ],
+   [
+    "HP",
+    1610,
+    51
+   ],
+   [
+    "Hisense",
+    5,
+    0
+   ],
+   [
+    "Honor",
+    9635,
+    81
+   ],
+   [
+    "Huawei",
+    1379,
+    10
+   ],
+   [
+    "Inoi",
+    42,
+    1
+   ],
+   [
+    "Intel",
+    1,
+    0
+   ],
+   [
+    "Itel",
+    9,
+    0
+   ],
+   [
+    "JoyStar",
+    59,
+    5
+   ],
+   [
+    "Kangaroo",
+    2,
+    0
+   ],
+   [
+    "Karofi",
+    2,
+    0
+   ],
+   [
+    "Kieslect",
+    32,
+    2
+   ],
+   [
+    "Kingmax",
+    8,
+    0
+   ],
+   [
+    "Kospet",
+    59,
+    4
+   ],
+   [
+    "LG",
+    530,
+    3
+   ],
+   [
+    "Lenovo",
+    3370,
+    178
+   ],
+   [
+    "Logitech",
+    20,
+    0
+   ],
+   [
+    "MSI",
+    1190,
+    25
+   ],
+   [
+    "Masstel",
+    3689,
+    90
+   ],
+   [
+    "Mobell",
+    28,
+    1
+   ],
+   [
+    "Myfirst",
+    25,
+    0
+   ],
+   [
+    "Myfirst Fone",
+    0,
+    4
+   ],
+   [
+    "Nokia",
+    1539,
+    29
+   ],
+   [
+    "Nubia",
+    4071,
+    33
+   ],
+   [
+    "Oppo",
+    8052,
+    31
+   ],
+   [
+    "Pramie",
+    2,
+    0
+   ],
+   [
+    "QUADRO",
+    0,
+    22
+   ],
+   [
+    "Realme",
+    60,
+    0
+   ],
+   [
+    "RedMagic",
+    955,
+    3
+   ],
+   [
+    "Samsung",
+    15058,
+    161
+   ],
+   [
+    "Sunhouse",
+    4,
+    0
+   ],
+   [
+    "TCL",
+    167,
+    1
+   ],
+   [
+    "Tecno",
+    1084,
+    4
+   ],
+   [
+    "VIEWSONIC",
+    0,
+    3
+   ],
+   [
+    "VSP",
+    149,
+    1
+   ],
+   [
+    "Viettel",
+    120,
+    14
+   ],
+   [
+    "Viewsonic",
+    224,
+    0
+   ],
+   [
+    "Vivo",
+    12,
+    0
+   ],
+   [
+    "WD",
+    6,
+    0
+   ],
+   [
+    "Xiaomi",
+    13897,
+    80
+   ],
+   [
+    "Xprinter",
+    2,
+    0
+   ],
+   [
+    "ZTE",
+    30,
+    0
+   ],
+   [
+    "ZTE Blade",
+    0,
+    2
+   ],
+   [
+    "Zebra",
+    6,
+    0
+   ],
+   [
+    "Zwatch",
+    43,
+    0
+   ]
+  ],
+  "M03.26": [
+   [
+    "APC",
+    27,
+    0
+   ],
+   [
+    "Acer",
+    2278,
+    147
+   ],
+   [
+    "Amazfit",
+    438,
+    7
+   ],
+   [
+    "Anker",
+    10,
+    0
+   ],
+   [
+    "Apple",
+    48083,
+    319
+   ],
+   [
+    "Asus",
+    4366,
+    361
+   ],
+   [
+    "Benco",
+    24,
+    2
+   ],
+   [
+    "Brother",
+    109,
+    0
+   ],
+   [
+    "Canon",
+    591,
+    2
+   ],
+   [
+    "Casper",
+    12,
+    0
+   ],
+   [
+    "Colorful",
+    219,
+    4
+   ],
+   [
+    "Crucial",
+    4,
+    0
+   ],
+   [
+    "DareU",
+    3,
+    0
+   ],
+   [
+    "Dell",
+    3156,
+    75
+   ],
+   [
+    "E-Power",
+    1910,
+    0
+   ],
+   [
+    "EDRA",
+    112,
+    3
+   ],
+   [
+    "Epson",
+    8,
+    0
+   ],
+   [
+    "Evolis",
+    1,
+    0
+   ],
+   [
+    "FPT",
+    7,
+    0
+   ],
+   [
+    "FPT Elead",
+    34,
+    0
+   ],
+   [
+    "Garmin",
+    3301,
+    6
+   ],
+   [
+    "Gigabyte",
+    301,
+    45
+   ],
+   [
+    "Goly",
+    22,
+    4
+   ],
+   [
+    "HP",
+    3770,
+    106
+   ],
+   [
+    "Harman Kardon",
+    1,
+    0
+   ],
+   [
+    "Hisense",
+    4,
+    0
+   ],
+   [
+    "Honor",
+    11214,
+    119
+   ],
+   [
+    "Huawei",
+    1878,
+    33
+   ],
+   [
+    "Inoi",
+    66,
+    5
+   ],
+   [
+    "Intel",
+    2,
+    0
+   ],
+   [
+    "Itel",
+    9,
+    0
+   ],
+   [
+    "JoyStar",
+    72,
+    3
+   ],
+   [
+    "Kangaroo",
+    4,
+    0
+   ],
+   [
+    "Karofi",
+    1,
+    0
+   ],
+   [
+    "Kieslect",
+    17,
+    6
+   ],
+   [
+    "Kingston",
+    7,
+    2
+   ],
+   [
+    "Kospet",
+    89,
+    13
+   ],
+   [
+    "LG",
+    990,
+    3
+   ],
+   [
+    "Lenovo",
+    4131,
+    304
+   ],
+   [
+    "Logitech",
+    58,
+    0
+   ],
+   [
+    "MSI",
+    1597,
+    61
+   ],
+   [
+    "Masstel",
+    3593,
+    155
+   ],
+   [
+    "Mobell",
+    32,
+    0
+   ],
+   [
+    "Myfirst",
+    35,
+    0
+   ],
+   [
+    "Myfirst Fone",
+    0,
+    10
+   ],
+   [
+    "Nokia",
+    1462,
+    46
+   ],
+   [
+    "Nubia",
+    4466,
+    49
+   ],
+   [
+    "Oppo",
+    7034,
+    60
+   ],
+   [
+    "Pramie",
+    4,
+    0
+   ],
+   [
+    "QUADRO",
+    0,
+    45
+   ],
+   [
+    "Rapoo",
+    20,
+    0
+   ],
+   [
+    "Realme",
+    44,
+    2
+   ],
+   [
+    "RedMagic",
+    1276,
+    13
+   ],
+   [
+    "Samsung",
+    16136,
+    300
+   ],
+   [
+    "SanDisk",
+    10,
+    0
+   ],
+   [
+    "Silicon",
+    1,
+    0
+   ],
+   [
+    "Sunhouse",
+    4,
+    0
+   ],
+   [
+    "Suunto",
+    5,
+    1
+   ],
+   [
+    "TCL",
+    185,
+    9
+   ],
+   [
+    "Tecno",
+    1633,
+    9
+   ],
+   [
+    "Transcend",
+    14,
+    0
+   ],
+   [
+    "Ugreen",
+    4,
+    0
+   ],
+   [
+    "VIEWSONIC",
+    0,
+    7
+   ],
+   [
+    "VSP",
+    188,
+    1
+   ],
+   [
+    "Viettel",
+    156,
+    12
+   ],
+   [
+    "Viewsonic",
+    377,
+    0
+   ],
+   [
+    "Vivo",
+    15,
+    0
+   ],
+   [
+    "Windora",
+    1,
+    0
+   ],
+   [
+    "Xiaomi",
+    10680,
+    264
+   ],
+   [
+    "Xprinter",
+    9,
+    0
+   ],
+   [
+    "ZKTeco",
+    4,
+    0
+   ],
+   [
+    "ZTE",
+    28,
+    0
+   ],
+   [
+    "ZTE Blade",
+    0,
+    1
+   ],
+   [
+    "Zebra",
+    28,
+    0
+   ],
+   [
+    "Zwatch",
+    66,
+    3
+   ],
+   [
+    "iDPRT",
+    4,
+    0
+   ]
+  ],
+  "M04.26": [
+   [
+    "APC",
+    2,
+    0
+   ],
+   [
+    "Acer",
+    1630,
+    137
+   ],
+   [
+    "Amazfit",
+    498,
+    9
+   ],
+   [
+    "Apple",
+    46796,
+    276
+   ],
+   [
+    "Asus",
+    3672,
+    279
+   ],
+   [
+    "Benco",
+    211,
+    7
+   ],
+   [
+    "Brother",
+    133,
+    1
+   ],
+   [
+    "CORSAIR",
+    1,
+    0
+   ],
+   [
+    "Canon",
+    555,
+    0
+   ],
+   [
+    "Casper",
+    9,
+    0
+   ],
+   [
+    "Chuwi",
+    4,
+    0
+   ],
+   [
+    "Colorful",
+    306,
+    2
+   ],
+   [
+    "Cooler Master",
+    5,
+    0
+   ],
+   [
+    "Crucial",
+    2,
+    0
+   ],
+   [
+    "Dell",
+    2872,
+    65
+   ],
+   [
+    "E-Power",
+    1627,
+    0
+   ],
+   [
+    "EDRA",
+    245,
+    2
+   ],
+   [
+    "Epson",
+    2,
+    0
+   ],
+   [
+    "FPT",
+    9,
+    0
+   ],
+   [
+    "Garmin",
+    2862,
+    7
+   ],
+   [
+    "Gigabyte",
+    195,
+    28
+   ],
+   [
+    "Goly",
+    9,
+    3
+   ],
+   [
+    "HP",
+    2695,
+    70
+   ],
+   [
+    "Hiksemi",
+    4,
+    0
+   ],
+   [
+    "Hisense",
+    3,
+    0
+   ],
+   [
+    "Honor",
+    10470,
+    110
+   ],
+   [
+    "Huain",
+    16,
+    0
+   ],
+   [
+    "Huawei",
+    1676,
+    16
+   ],
+   [
+    "Hòa Phát",
+    2,
+    0
+   ],
+   [
+    "Inoi",
+    51,
+    6
+   ],
+   [
+    "Intel",
+    11,
+    0
+   ],
+   [
+    "Itel",
+    7,
+    1
+   ],
+   [
+    "JBL",
+    1,
+    0
+   ],
+   [
+    "JoyStar",
+    55,
+    3
+   ],
+   [
+    "Kangaroo",
+    3,
+    0
+   ],
+   [
+    "Kieslect",
+    15,
+    3
+   ],
+   [
+    "Kingmax",
+    44,
+    0
+   ],
+   [
+    "Kingston",
+    12,
+    3
+   ],
+   [
+    "Kospet",
+    43,
+    10
+   ],
+   [
+    "LG",
+    756,
+    4
+   ],
+   [
+    "Leadtek",
+    8,
+    0
+   ],
+   [
+    "Lenovo",
+    3283,
+    220
+   ],
+   [
+    "Lexar",
+    120,
+    0
+   ],
+   [
+    "Logitech",
+    11,
+    0
+   ],
+   [
+    "MSI",
+    1139,
+    45
+   ],
+   [
+    "Masstel",
+    2397,
+    122
+   ],
+   [
+    "Meta",
+    2,
+    0
+   ],
+   [
+    "Microsoft",
+    504,
+    0
+   ],
+   [
+    "Mobell",
+    16,
+    1
+   ],
+   [
+    "Myfirst",
+    25,
+    0
+   ],
+   [
+    "Myfirst Fone",
+    0,
+    5
+   ],
+   [
+    "Nokia",
+    1377,
+    28
+   ],
+   [
+    "Nubia",
+    3591,
+    22
+   ],
+   [
+    "Oppo",
+    7475,
+    84
+   ],
+   [
+    "Patriot",
+    60,
+    0
+   ],
+   [
+    "Philips",
+    16,
+    0
+   ],
+   [
+    "Pramie",
+    3,
+    0
+   ],
+   [
+    "QUADRO",
+    0,
+    28
+   ],
+   [
+    "Realme",
+    35,
+    2
+   ],
+   [
+    "RedMagic",
+    1719,
+    20
+   ],
+   [
+    "SAMA",
+    1,
+    0
+   ],
+   [
+    "Samsung",
+    17445,
+    213
+   ],
+   [
+    "SanDisk",
+    2,
+    0
+   ],
+   [
+    "Seagate",
+    5,
+    0
+   ],
+   [
+    "Silicon",
+    13,
+    0
+   ],
+   [
+    "Sony",
+    3,
+    0
+   ],
+   [
+    "Sunhouse",
+    1,
+    0
+   ],
+   [
+    "Suunto",
+    4,
+    0
+   ],
+   [
+    "TCL",
+    112,
+    7
+   ],
+   [
+    "Teamgroup",
+    1,
+    0
+   ],
+   [
+    "Tecno",
+    2889,
+    3
+   ],
+   [
+    "Ugreen",
+    2,
+    0
+   ],
+   [
+    "VAIO",
+    2,
+    0
+   ],
+   [
+    "VIEWSONIC",
+    0,
+    4
+   ],
+   [
+    "VSP",
+    123,
+    1
+   ],
+   [
+    "Viettel",
+    76,
+    9
+   ],
+   [
+    "Viewsonic",
+    286,
+    0
+   ],
+   [
+    "Vivo",
+    35,
+    0
+   ],
+   [
+    "WD",
+    2,
+    0
+   ],
+   [
+    "Winson",
+    2,
+    0
+   ],
+   [
+    "Xiaomi",
+    9515,
+    105
+   ],
+   [
+    "Yealink",
+    4,
+    0
+   ],
+   [
+    "ZTE",
+    19,
+    0
+   ],
+   [
+    "ZTE Blade",
+    0,
+    4
+   ],
+   [
+    "Zebra",
+    2,
+    0
+   ],
+   [
+    "Zwatch",
+    29,
+    4
+   ]
+  ],
+  "M05.26": [
+   [
+    "AC",
+    2,
+    0
+   ],
+   [
+    "AOC",
+    60,
+    0
+   ],
+   [
+    "APC",
+    6,
+    0
+   ],
+   [
+    "Acer",
+    1638,
+    153
+   ],
+   [
+    "Amazfit",
+    687,
+    9
+   ],
+   [
+    "Apple",
+    40725,
+    223
+   ],
+   [
+    "Asus",
+    3743,
+    309
+   ],
+   [
+    "Beecube",
+    0,
+    1
+   ],
+   [
+    "Benco",
+    381,
+    8
+   ],
+   [
+    "Brother",
+    120,
+    1
+   ],
+   [
+    "Canon",
+    502,
+    3
+   ],
+   [
+    "Casper",
+    8,
+    0
+   ],
+   [
+    "Colorful",
+    308,
+    4
+   ],
+   [
+    "Comfast",
+    60,
+    0
+   ],
+   [
+    "Cooler Master",
+    2,
+    0
+   ],
+   [
+    "Coolpad",
+    14,
+    0
+   ],
+   [
+    "Crucial",
+    11,
+    0
+   ],
+   [
+    "Dalite",
+    1,
+    0
+   ],
+   [
+    "Dell",
+    1805,
+    66
+   ],
+   [
+    "E-Power",
+    1315,
+    0
+   ],
+   [
+    "EDRA",
+    181,
+    4
+   ],
+   [
+    "Epson",
+    2,
+    0
+   ],
+   [
+    "FPT",
+    1,
+    0
+   ],
+   [
+    "Garmin",
+    3197,
+    6
+   ],
+   [
+    "Gigabyte",
+    206,
+    31
+   ],
+   [
+    "Goly",
+    8,
+    4
+   ],
+   [
+    "HP",
+    2735,
+    76
+   ],
+   [
+    "Hafele",
+    1,
+    0
+   ],
+   [
+    "Hikvision",
+    1,
+    0
+   ],
+   [
+    "Hisense",
+    2,
+    0
+   ],
+   [
+    "Honor",
+    10371,
+    113
+   ],
+   [
+    "Huawei",
+    1658,
+    29
+   ],
+   [
+    "Hòa Phát",
+    2,
+    0
+   ],
+   [
+    "IPC",
+    10,
+    0
+   ],
+   [
+    "Inoi",
+    44,
+    8
+   ],
+   [
+    "Intel",
+    1,
+    0
+   ],
+   [
+    "Itel",
+    6,
+    0
+   ],
+   [
+    "JoyStar",
+    79,
+    6
+   ],
+   [
+    "Kangaroo",
+    3,
+    0
+   ],
+   [
+    "Karofi",
+    1,
+    0
+   ],
+   [
+    "Khác",
+    71,
+    0
+   ],
+   [
+    "KidPlus",
+    4,
+    0
+   ],
+   [
+    "Kieslect",
+    8,
+    3
+   ],
+   [
+    "Kingmax",
+    1,
+    0
+   ],
+   [
+    "Kingston",
+    38,
+    1
+   ],
+   [
+    "Kospet",
+    60,
+    16
+   ],
+   [
+    "LG",
+    715,
+    3
+   ],
+   [
+    "Lenovo",
+    3360,
+    273
+   ],
+   [
+    "Lexar",
+    73,
+    0
+   ],
+   [
+    "MOBIISTAR",
+    3,
+    0
+   ],
+   [
+    "MSI",
+    1271,
+    49
+   ],
+   [
+    "Masstel",
+    5883,
+    128
+   ],
+   [
+    "Meizu",
+    2,
+    0
+   ],
+   [
+    "Microsoft",
+    7,
+    0
+   ],
+   [
+    "Mobell",
+    31,
+    0
+   ],
+   [
+    "Myfirst",
+    24,
+    0
+   ],
+   [
+    "Myfirst Fone",
+    0,
+    6
+   ],
+   [
+    "Nokia",
+    1411,
+    29
+   ],
+   [
+    "Nubia",
+    5229,
+    41
+   ],
+   [
+    "Oppo",
+    7422,
+    38
+   ],
+   [
+    "Patriot",
+    20,
+    0
+   ],
+   [
+    "Philips",
+    270,
+    0
+   ],
+   [
+    "QUADRO",
+    0,
+    31
+   ],
+   [
+    "Realme",
+    96,
+    2
+   ],
+   [
+    "RedMagic",
+    925,
+    29
+   ],
+   [
+    "SAMA",
+    1,
+    0
+   ],
+   [
+    "SSTC",
+    5,
+    0
+   ],
+   [
+    "Samsung",
+    32030,
+    247
+   ],
+   [
+    "SanDisk",
+    1,
+    0
+   ],
+   [
+    "Sony",
+    3,
+    0
+   ],
+   [
+    "Suunto",
+    7,
+    0
+   ],
+   [
+    "TCL",
+    158,
+    6
+   ],
+   [
+    "Tecno",
+    1517,
+    6
+   ],
+   [
+    "Transcend",
+    4,
+    0
+   ],
+   [
+    "VIEWSONIC",
+    0,
+    3
+   ],
+   [
+    "VSP",
+    113,
+    1
+   ],
+   [
+    "Viettel",
+    81,
+    9
+   ],
+   [
+    "Viewsonic",
+    215,
+    0
+   ],
+   [
+    "Vivo",
+    25,
+    0
+   ],
+   [
+    "Vsmart",
+    3,
+    0
+   ],
+   [
+    "WD",
+    71,
+    0
+   ],
+   [
+    "Winson",
+    49,
+    0
+   ],
+   [
+    "Xiaomi",
+    11479,
+    80
+   ],
+   [
+    "Xprinter",
+    1,
+    0
+   ],
+   [
+    "Yaber",
+    0,
+    1
+   ],
+   [
+    "ZTE Blade",
+    0,
+    2
+   ],
+   [
+    "Zwatch",
+    44,
+    9
+   ]
+  ],
+  "M06.26": [
+   [
+    "AOC",
+    90,
+    0
+   ],
+   [
+    "APC",
+    2,
+    0
+   ],
+   [
+    "Acer",
+    1667,
+    159
+   ],
+   [
+    "Amazfit",
+    467,
+    6
+   ],
+   [
+    "Apple",
+    45058,
+    259
+   ],
+   [
+    "Asus",
+    3573,
+    321
+   ],
+   [
+    "Avita",
+    2,
+    0
+   ],
+   [
+    "Beecube",
+    0,
+    1
+   ],
+   [
+    "Benco",
+    586,
+    20
+   ],
+   [
+    "Brother",
+    187,
+    1
+   ],
+   [
+    "CORSAIR",
+    4,
+    0
+   ],
+   [
+    "Canon",
+    513,
+    3
+   ],
+   [
+    "Casper",
+    8,
+    0
+   ],
+   [
+    "Chuwi",
+    7,
+    0
+   ],
+   [
+    "Colorful",
+    198,
+    7
+   ],
+   [
+    "Cooler Master",
+    1,
+    0
+   ],
+   [
+    "Dell",
+    2957,
+    55
+   ],
+   [
+    "E-Power",
+    1334,
+    0
+   ],
+   [
+    "EDRA",
+    191,
+    0
+   ],
+   [
+    "Garmin",
+    3323,
+    6
+   ],
+   [
+    "Gigabyte",
+    225,
+    41
+   ],
+   [
+    "Goly",
+    13,
+    2
+   ],
+   [
+    "HP",
+    2843,
+    84
+   ],
+   [
+    "Hikvision",
+    3,
+    0
+   ],
+   [
+    "Hisense",
+    2,
+    0
+   ],
+   [
+    "Honor",
+    10521,
+    117
+   ],
+   [
+    "Huawei",
+    1427,
+    35
+   ],
+   [
+    "Hòa Phát",
+    5,
+    0
+   ],
+   [
+    "Inoi",
+    34,
+    3
+   ],
+   [
+    "Intel",
+    2,
+    0
+   ],
+   [
+    "Itel",
+    4,
+    1
+   ],
+   [
+    "Jabra",
+    4,
+    0
+   ],
+   [
+    "JoyStar",
+    79,
+    9
+   ],
+   [
+    "Kangaroo",
+    2,
+    0
+   ],
+   [
+    "Khác",
+    21,
+    0
+   ],
+   [
+    "Kieslect",
+    14,
+    1
+   ],
+   [
+    "Kingmax",
+    43,
+    0
+   ],
+   [
+    "Kingston",
+    5,
+    4
+   ],
+   [
+    "Kospet",
+    64,
+    12
+   ],
+   [
+    "LG",
+    742,
+    0
+   ],
+   [
+    "Lenovo",
+    3560,
+    284
+   ],
+   [
+    "Logitech",
+    38,
+    0
+   ],
+   [
+    "MSI",
+    891,
+    51
+   ],
+   [
+    "Manual",
+    1,
+    0
+   ],
+   [
+    "Masstel",
+    4496,
+    117
+   ],
+   [
+    "Microsoft",
+    6,
+    0
+   ],
+   [
+    "Mobell",
+    19,
+    2
+   ],
+   [
+    "Myfirst",
+    105,
+    0
+   ],
+   [
+    "Myfirst Fone",
+    0,
+    5
+   ],
+   [
+    "Nagakawa",
+    1,
+    0
+   ],
+   [
+    "Nokia",
+    1243,
+    30
+   ],
+   [
+    "Nubia",
+    5031,
+    41
+   ],
+   [
+    "Oppo",
+    8369,
+    66
+   ],
+   [
+    "Prolink",
+    4,
+    0
+   ],
+   [
+    "QUADRO",
+    0,
+    41
+   ],
+   [
+    "Realme",
+    50,
+    0
+   ],
+   [
+    "RedMagic",
+    552,
+    31
+   ],
+   [
+    "SSTC",
+    5,
+    0
+   ],
+   [
+    "Samsung",
+    37491,
+    859
+   ],
+   [
+    "Seagate",
+    6,
+    0
+   ],
+   [
+    "Silicon",
+    6,
+    0
+   ],
+   [
+    "Suunto",
+    2,
+    0
+   ],
+   [
+    "Synology",
+    12,
+    0
+   ],
+   [
+    "TCL",
+    189,
+    9
+   ],
+   [
+    "TEZAG",
+    1,
+    0
+   ],
+   [
+    "Tecno",
+    1612,
+    15
+   ],
+   [
+    "VIEWSONIC",
+    0,
+    7
+   ],
+   [
+    "VSP",
+    150,
+    0
+   ],
+   [
+    "Viettel",
+    73,
+    10
+   ],
+   [
+    "Viewsonic",
+    230,
+    0
+   ],
+   [
+    "Vivo",
+    3,
+    0
+   ],
+   [
+    "Wanbo",
+    0,
+    1
+   ],
+   [
+    "Western Digital",
+    14,
+    0
+   ],
+   [
+    "Winson",
+    101,
+    0
+   ],
+   [
+    "Xiaomi",
+    12168,
+    104
+   ],
+   [
+    "Zebra",
+    4,
+    0
+   ],
+   [
+    "Zwatch",
+    32,
+    2
+   ]
+  ],
+  "M07.26": [
+   [
+    "AC",
+    13,
+    0
+   ],
+   [
+    "AOC",
+    24,
+    0
+   ],
+   [
+    "APC",
+    33,
+    0
+   ],
+   [
+    "ARROW",
+    1,
+    0
+   ],
+   [
+    "Acer",
+    2071,
+    156
+   ],
+   [
+    "Amazfit",
+    349,
+    11
+   ],
+   [
+    "Apple",
+    40419,
+    198
+   ],
+   [
+    "Asus",
+    5108,
+    345
+   ],
+   [
+    "Beecube",
+    0,
+    1
+   ],
+   [
+    "Benco",
+    900,
+    27
+   ],
+   [
+    "Brother",
+    207,
+    4
+   ],
+   [
+    "CORSAIR",
+    1,
+    0
+   ],
+   [
+    "Canon",
+    700,
+    1
+   ],
+   [
+    "Casper",
+    6,
+    0
+   ],
+   [
+    "Chuwi",
+    2,
+    0
+   ],
+   [
+    "Colorful",
+    686,
+    8
+   ],
+   [
+    "Coros",
+    87,
+    0
+   ],
+   [
+    "Crucial",
+    2,
+    0
+   ],
+   [
+    "DEERMA",
+    7,
+    0
+   ],
+   [
+    "Deep Cool",
+    1,
+    0
+   ],
+   [
+    "Dell",
+    3341,
+    63
+   ],
+   [
+    "E-KIDS",
+    4,
+    0
+   ],
+   [
+    "E-Power",
+    1927,
+    0
+   ],
+   [
+    "EDRA",
+    116,
+    1
+   ],
+   [
+    "ELEAD",
+    11,
+    0
+   ],
+   [
+    "Epson",
+    2,
+    0
+   ],
+   [
+    "Eroc",
+    0,
+    1
+   ],
+   [
+    "Ezviz",
+    3,
+    0
+   ],
+   [
+    "FPT",
+    16,
+    0
+   ],
+   [
+    "Garmin",
+    3887,
+    11
+   ],
+   [
+    "Gigabyte",
+    333,
+    34
+   ],
+   [
+    "Goldsun",
+    2,
+    0
+   ],
+   [
+    "Goly",
+    11,
+    2
+   ],
+   [
+    "Gskill",
+    1,
+    0
+   ],
+   [
+    "HP",
+    4050,
+    117
+   ],
+   [
+    "Hafele",
+    60,
+    0
+   ],
+   [
+    "Hiksemi",
+    2,
+    0
+   ],
+   [
+    "Hikvision",
+    14,
+    0
+   ],
+   [
+    "Hisense",
+    1,
+    0
+   ],
+   [
+    "Honor",
+    11718,
+    214
+   ],
+   [
+    "Hotwell",
+    29,
+    0
+   ],
+   [
+    "Huawei",
+    1278,
+    24
+   ],
+   [
+    "Hòa Phát",
+    2,
+    0
+   ],
+   [
+    "IDCooling",
+    1,
+    0
+   ],
+   [
+    "IPC",
+    6,
+    0
+   ],
+   [
+    "Imou",
+    3,
+    0
+   ],
+   [
+    "Inoi",
+    38,
+    7
+   ],
+   [
+    "Intel",
+    7,
+    0
+   ],
+   [
+    "Itel",
+    22,
+    0
+   ],
+   [
+    "Jabra",
+    3,
+    0
+   ],
+   [
+    "JoyStar",
+    58,
+    5
+   ],
+   [
+    "Kangaroo",
+    527,
+    0
+   ],
+   [
+    "Karofi",
+    5,
+    0
+   ],
+   [
+    "Kieslect",
+    10,
+    1
+   ],
+   [
+    "Kingmax",
+    38,
+    0
+   ],
+   [
+    "Kingston",
+    11,
+    0
+   ],
+   [
+    "Kospet",
+    40,
+    8
+   ],
+   [
+    "Kyvol",
+    1,
+    0
+   ],
+   [
+    "LG",
+    791,
+    5
+   ],
+   [
+    "Lenovo",
+    3956,
+    282
+   ],
+   [
+    "Logitech",
+    3,
+    0
+   ],
+   [
+    "MSI",
+    920,
+    65
+   ],
+   [
+    "Masstel",
+    6027,
+    129
+   ],
+   [
+    "Mobell",
+    17,
+    1
+   ],
+   [
+    "Myfirst",
+    155,
+    0
+   ],
+   [
+    "Myfirst Fone",
+    0,
+    1
+   ],
+   [
+    "Nokia",
+    1748,
+    36
+   ],
+   [
+    "Nubia",
+    6287,
+    62
+   ],
+   [
+    "Oppo",
+    8457,
+    57
+   ],
+   [
+    "Pantum",
+    1,
+    0
+   ],
+   [
+    "Pramie",
+    1,
+    0
+   ],
+   [
+    "QUADRO",
+    0,
+    34
+   ],
+   [
+    "Realme",
+    28,
+    1
+   ],
+   [
+    "RedMagic",
+    617,
+    27
+   ],
+   [
+    "Ricoh",
+    1,
+    0
+   ],
+   [
+    "Samsung",
+    40664,
+    1166
+   ],
+   [
+    "Sharp",
+    10,
+    0
+   ],
+   [
+    "Showsee",
+    2,
+    0
+   ],
+   [
+    "Silicon",
+    3,
+    0
+   ],
+   [
+    "Sunhouse",
+    2,
+    0
+   ],
+   [
+    "Suunto",
+    2,
+    0
+   ],
+   [
+    "Synology",
+    2,
+    0
+   ],
+   [
+    "TCL",
+    268,
+    9
+   ],
+   [
+    "Tecno",
+    1980,
+    9
+   ],
+   [
+    "Toshiba",
+    111,
+    0
+   ],
+   [
+    "Ugreen",
+    9,
+    0
+   ],
+   [
+    "VAIO",
+    0,
+    2
+   ],
+   [
+    "VIEWSONIC",
+    0,
+    5
+   ],
+   [
+    "VSP",
+    86,
+    1
+   ],
+   [
+    "Viettel",
+    76,
+    10
+   ],
+   [
+    "Viewsonic",
+    163,
+    0
+   ],
+   [
+    "Vivo",
+    2,
+    0
+   ],
+   [
+    "WD",
+    8,
+    0
+   ],
+   [
+    "Wanbo",
+    0,
+    3
+   ],
+   [
+    "Winson",
+    54,
+    0
+   ],
+   [
+    "Xiaomi",
+    11535,
+    107
+   ],
+   [
+    "Xprinter",
+    3,
+    1
+   ],
+   [
+    "Yaber",
+    0,
+    2
+   ],
+   [
+    "Yealink",
+    1,
+    0
+   ],
+   [
+    "ZTE",
+    6,
+    0
+   ],
+   [
+    "ZTE Blade",
+    0,
+    2
+   ],
+   [
+    "Zwatch",
+    37,
+    3
+   ]
+  ],
+  "M08.26": [
+   [
+    "AOC",
+    30,
+    0
+   ],
+   [
+    "APC",
+    2,
+    0
+   ],
+   [
+    "Acer",
+    3637,
+    147
+   ],
+   [
+    "Amazfit",
+    242,
+    6
+   ],
+   [
+    "Apple",
+    47136,
+    249
+   ],
+   [
+    "Asus",
+    7586,
+    352
+   ],
+   [
+    "Beecube",
+    0,
+    2
+   ],
+   [
+    "Benco",
+    1756,
+    39
+   ],
+   [
+    "Brother",
+    172,
+    1
+   ],
+   [
+    "Canon",
+    587,
+    3
+   ],
+   [
+    "Casper",
+    24,
+    0
+   ],
+   [
+    "Colorful",
+    1288,
+    10
+   ],
+   [
+    "Dell",
+    5975,
+    70
+   ],
+   [
+    "E-KIDS",
+    3363,
+    16
+   ],
+   [
+    "E-Power",
+    1857,
+    0
+   ],
+   [
+    "EDRA",
+    150,
+    2
+   ],
+   [
+    "ELEAD",
+    1,
+    0
+   ],
+   [
+    "Epson",
+    2,
+    0
+   ],
+   [
+    "Garmin",
+    3270,
+    8
+   ],
+   [
+    "Gigabyte",
+    622,
+    48
+   ],
+   [
+    "Goly",
+    4,
+    4
+   ],
+   [
+    "HP",
+    5591,
+    81
+   ],
+   [
+    "Harman Kardon",
+    1,
+    0
+   ],
+   [
+    "Hikers",
+    2,
+    0
+   ],
+   [
+    "Hikvision",
+    27,
+    0
+   ],
+   [
+    "Hisense",
+    1,
+    0
+   ],
+   [
+    "Honor",
+    12056,
+    117
+   ],
+   [
+    "Huawei",
+    1288,
+    24
+   ],
+   [
+    "Inoi",
+    40,
+    3
+   ],
+   [
+    "Itel",
+    71,
+    0
+   ],
+   [
+    "JoyStar",
+    61,
+    4
+   ],
+   [
+    "Khác",
+    3,
+    0
+   ],
+   [
+    "Kieslect",
+    11,
+    1
+   ],
+   [
+    "Kingmax",
+    2,
+    0
+   ],
+   [
+    "Kingston",
+    22,
+    0
+   ],
+   [
+    "Kospet",
+    26,
+    8
+   ],
+   [
+    "LG",
+    909,
+    7
+   ],
+   [
+    "Lenovo",
+    5690,
+    302
+   ],
+   [
+    "Lexar",
+    1,
+    0
+   ],
+   [
+    "Logitech",
+    44,
+    0
+   ],
+   [
+    "MSI",
+    1395,
+    55
+   ],
+   [
+    "Masstel",
+    4253,
+    111
+   ],
+   [
+    "Mobell",
+    24,
+    0
+   ],
+   [
+    "Myfirst",
+    39,
+    0
+   ],
+   [
+    "Myfirst Fone",
+    0,
+    4
+   ],
+   [
+    "Nokia",
+    1856,
+    27
+   ],
+   [
+    "Nubia",
+    6978,
+    40
+   ],
+   [
+    "Oppo",
+    12345,
+    115
+   ],
+   [
+    "Pantum",
+    11,
+    0
+   ],
+   [
+    "Prolink",
+    1,
+    0
+   ],
+   [
+    "QUADRO",
+    0,
+    48
+   ],
+   [
+    "Realme",
+    17,
+    0
+   ],
+   [
+    "RedMagic",
+    593,
+    18
+   ],
+   [
+    "Samsung",
+    20951,
+    238
+   ],
+   [
+    "Sharp",
+    1,
+    0
+   ],
+   [
+    "Suunto",
+    2,
+    0
+   ],
+   [
+    "TCL",
+    278,
+    6
+   ],
+   [
+    "Tecno",
+    1237,
+    7
+   ],
+   [
+    "Ugreen",
+    26,
+    0
+   ],
+   [
+    "VAIO",
+    0,
+    1
+   ],
+   [
+    "VIEWSONIC",
+    0,
+    9
+   ],
+   [
+    "VSP",
+    67,
+    2
+   ],
+   [
+    "Viettel",
+    93,
+    8
+   ],
+   [
+    "Viewsonic",
+    144,
+    0
+   ],
+   [
+    "Vivo",
+    1,
+    0
+   ],
+   [
+    "WD",
+    4,
+    0
+   ],
+   [
+    "Wanbo",
+    0,
+    1
+   ],
+   [
+    "Winson",
+    62,
+    0
+   ],
+   [
+    "Xiaomi",
+    13856,
+    98
+   ],
+   [
+    "Xprinter",
+    3,
+    0
+   ],
+   [
+    "Zebra",
+    5,
+    0
+   ],
+   [
+    "Zobo",
+    76,
+    0
+   ],
+   [
+    "Zwatch",
+    33,
+    5
+   ],
+   [
+    "myALO",
+    32,
+    0
+   ]
+  ],
+  "M09.26": [
+   [
+    "AOC",
+    17,
+    0
+   ],
+   [
+    "APC",
+    6,
+    0
+   ],
+   [
+    "AVer",
+    5,
+    0
+   ],
+   [
+    "Acer",
+    3169,
+    146
+   ],
+   [
+    "Adata",
+    3,
+    0
+   ],
+   [
+    "Amazfit",
+    292,
+    11
+   ],
+   [
+    "Apple",
+    51568,
+    241
+   ],
+   [
+    "Asus",
+    7168,
+    372
+   ],
+   [
+    "Benco",
+    1376,
+    65
+   ],
+   [
+    "Brother",
+    248,
+    1
+   ],
+   [
+    "Canon",
+    939,
+    5
+   ],
+   [
+    "Casper",
+    18,
+    0
+   ],
+   [
+    "Colorful",
+    1047,
+    18
+   ],
+   [
+    "Cyber",
+    1,
+    0
+   ],
+   [
+    "Dell",
+    5143,
+    75
+   ],
+   [
+    "E-KIDS",
+    2913,
+    44
+   ],
+   [
+    "E-Power",
+    1569,
+    0
+   ],
+   [
+    "EDRA",
+    133,
+    4
+   ],
+   [
+    "Epson",
+    1,
+    0
+   ],
+   [
+    "FPT Elead",
+    462,
+    0
+   ],
+   [
+    "Garmin",
+    3773,
+    14
+   ],
+   [
+    "Gigabyte",
+    593,
+    38
+   ],
+   [
+    "Goly",
+    12,
+    1
+   ],
+   [
+    "HP",
+    5522,
+    71
+   ],
+   [
+    "Hanin",
+    39,
+    0
+   ],
+   [
+    "Hikers",
+    13,
+    0
+   ],
+   [
+    "Hikvision",
+    48,
+    0
+   ],
+   [
+    "Hisense",
+    1,
+    0
+   ],
+   [
+    "Honeywell",
+    36,
+    0
+   ],
+   [
+    "Honor",
+    10677,
+    143
+   ],
+   [
+    "Huawei",
+    1311,
+    37
+   ],
+   [
+    "Inoi",
+    35,
+    7
+   ],
+   [
+    "Itel",
+    280,
+    1
+   ],
+   [
+    "Jabra",
+    2,
+    0
+   ],
+   [
+    "JoyStar",
+    35,
+    4
+   ],
+   [
+    "Kangaroo",
+    1,
+    0
+   ],
+   [
+    "Khác",
+    2,
+    0
+   ],
+   [
+    "Kieslect",
+    7,
+    0
+   ],
+   [
+    "Kingmax",
+    2,
+    0
+   ],
+   [
+    "Kingston",
+    14,
+    1
+   ],
+   [
+    "Kospet",
+    34,
+    6
+   ],
+   [
+    "LG",
+    848,
+    8
+   ],
+   [
+    "Lenovo",
+    5901,
+    300
+   ],
+   [
+    "Logitech",
+    1,
+    0
+   ],
+   [
+    "MSI",
+    1317,
+    56
+   ],
+   [
+    "Masstel",
+    5901,
+    162
+   ],
+   [
+    "Mobell",
+    23,
+    1
+   ],
+   [
+    "Myfirst",
+    35,
+    0
+   ],
+   [
+    "Myfirst Fone",
+    0,
+    7
+   ],
+   [
+    "Nokia",
+    1991,
+    33
+   ],
+   [
+    "Nubia",
+    4771,
+    58
+   ],
+   [
+    "Oppo",
+    11616,
+    47
+   ],
+   [
+    "Pantum",
+    43,
+    0
+   ],
+   [
+    "QUADRO",
+    0,
+    38
+   ],
+   [
+    "Realme",
+    5,
+    0
+   ],
+   [
+    "RedMagic",
+    236,
+    24
+   ],
+   [
+    "Ricoh",
+    2,
+    0
+   ],
+   [
+    "SSTC",
+    71,
+    0
+   ],
+   [
+    "Samsung",
+    18929,
+    148
+   ],
+   [
+    "Sharp",
+    5,
+    0
+   ],
+   [
+    "Silicon",
+    6,
+    0
+   ],
+   [
+    "Sony",
+    5,
+    0
+   ],
+   [
+    "Sunhouse",
+    2,
+    0
+   ],
+   [
+    "TCL",
+    173,
+    12
+   ],
+   [
+    "Tecno",
+    668,
+    15
+   ],
+   [
+    "Toshiba",
+    1,
+    0
+   ],
+   [
+    "Transcend",
+    2,
+    0
+   ],
+   [
+    "Ugreen",
+    7,
+    0
+   ],
+   [
+    "VIEWSONIC",
+    0,
+    6
+   ],
+   [
+    "VSP",
+    71,
+    1
+   ],
+   [
+    "Viettel",
+    72,
+    5
+   ],
+   [
+    "Viewsonic",
+    125,
+    0
+   ],
+   [
+    "Vivo",
+    2,
+    0
+   ],
+   [
+    "WD",
+    60,
+    0
+   ],
+   [
+    "Wanbo",
+    0,
+    1
+   ],
+   [
+    "Winson",
+    97,
+    0
+   ],
+   [
+    "Xiaomi",
+    15379,
+    96
+   ],
+   [
+    "Xprinter",
+    2,
+    0
+   ],
+   [
+    "Yaber",
+    1,
+    1
+   ],
+   [
+    "Yealink",
+    1,
+    0
+   ],
+   [
+    "Zebra",
+    16,
+    0
+   ],
+   [
+    "Zobo",
+    129,
+    1
+   ],
+   [
+    "Zwatch",
+    34,
+    4
+   ],
+   [
+    "myALO",
+    103,
+    2
+   ]
+  ]
+ }
+}
