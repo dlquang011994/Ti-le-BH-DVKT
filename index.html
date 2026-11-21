@@ -94,6 +94,12 @@
       html[data-theme="dark"] .kpi.hero { color: #0c1512; }
       html[data-theme="dark"] .kpi.hero .k-label, html[data-theme="dark"] .kpi.hero .k-note { color: rgba(12,21,18,0.75); }
       @media (max-width: 760px) { .kpis { grid-template-columns: 1fr 1fr; } .kpi.hero { grid-column: span 2; } .kpi .k-value { font-size: 24px; } }
+      @media (max-width: 400px) {
+        /* Điện thoại nhỏ (360px): ô chọn xếp dọc full chiều rộng, số KPI nhỏ lại cho vừa thẻ */
+        .f-field { flex: 1 1 100%; }
+        .kpi { padding: 12px; }
+        .kpi .k-value { font-size: 21px; }
+      }
 
       section.block { margin-top: 34px; }
       section.block > h2 { font-size: 19px; font-weight: 800; margin: 0 0 2px; letter-spacing: -0.01em; }
@@ -144,6 +150,11 @@
       /* Chart */
       .chart-scroll { width: 100%; }
       svg.chart { width: 100%; height: auto; display: block; }
+      @media (max-width: 640px) {
+        /* Điện thoại: biểu đồ giữ nguyên cỡ đọc được, vuốt ngang để xem */
+        .chart-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .chart-scroll svg.chart { width: 620px; min-width: 620px; }
+      }
       .ov-title { font-size: 13.5px; font-weight: 700; color: var(--ink-2); margin: 0 0 4px; }
 
       /* Heatmap: mỗi ô = 1 nhóm × 1 tháng, màu càng đậm tỉ lệ càng cao */
@@ -164,7 +175,8 @@
       .hm-avg-label { display: none; }
       .heat-legend { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 16px; font-size: 12.5px; color: var(--ink-2); }
       .heat-scale { flex: 0 0 170px; height: 10px; border-radius: 5px; border: 1px solid var(--line); background: linear-gradient(90deg, rgba(228,87,46,0.06), rgba(228,87,46,0.92)); }
-      @media (max-width: 640px) {
+      /* Bảng màu xếp dọc từ 900px trở xuống: ở khung hẹp hơn, 1 hàng 12 tháng không đủ chỗ, tiêu đề tháng chồng nhau */
+      @media (max-width: 900px) {
         .hm-head { display: none; }
         .hm-row { flex-direction: column; gap: 6px; padding: 12px 0; border-bottom: 1px solid var(--line); }
         .hm-row:last-child { border-bottom: none; }
@@ -232,8 +244,8 @@
       .d-down { color: var(--accent); font-weight: 600; }
       .swatch.line2 { height: 3px; border-radius: 2px; }
       /* Cột đầu (nhãn dòng) cố định khi cuộn ngang */
-      table.cmp thead tr:first-child th:first-child { position: sticky; left: 0; z-index: 3; background: var(--surface); border-right: 1px solid var(--line); }
-      table.cmp td:first-child { position: sticky; left: 0; z-index: 1; background: var(--surface); border-right: 1px solid var(--line); min-width: 96px; }
+      table.cmp thead tr:first-child th:first-child { position: -webkit-sticky; position: sticky; left: 0; z-index: 3; background: var(--surface); border-right: 1px solid var(--line); }
+      table.cmp td:first-child { position: -webkit-sticky; position: sticky; left: 0; z-index: 1; background: var(--surface); border-right: 1px solid var(--line); min-width: 96px; }
       table.cmp tr.total td:first-child { background: var(--surface-2); }
       @media (max-width: 640px) {
         table.cmp th, table.cmp td { padding: 8px; font-size: 13.5px; }
@@ -531,7 +543,7 @@
           const r = b.bh / b.sold * 100;
           return '<div class="brand-row">' +
             '<span class="b-name">' + b.name + "</span>" +
-            '<span class="b-track"><i class="bar-' + rateCls(r) + '" style="width:' + (r / max * 100).toFixed(1) + '%"></i></span>' +
+            '<span class="b-track"><i class="bar-' + rateCls(r) + '" style="width:' + (r > 0 ? Math.max(r / max * 100, 2) : 0).toFixed(1) + '%"></i></span>' +
             '<span class="b-vals"><span class="rate-big num rate-' + rateCls(r) + '">' + pct(b.bh, b.sold) + '</span><span class="vals-small">BH <span class="num">' + fmt(b.bh) + '</span> · Bán <span class="num">' + fmt(b.sold) + "</span></span></span>" +
           "</div>";
         }).join("");
